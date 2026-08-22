@@ -39,69 +39,140 @@ jobs:
           import re
           import json
           import subprocess
+          import urllib.request
           from datetime import datetime
+
 
           # ==========================================================
           # 設定
           # ==========================================================
           SOLUTIONS_DIR = "solutions"
-          PROBLEMS_FILE = "problems.json"
           README_FILE = "README.md"
 
-          # ==========================================================
-          # 讀取 problems.json
-          #
-          # 即使：
-          # 1. problems.json 不存在
-          # 2. problems.json 是空的
-          # 3. problems.json 格式錯誤
-          #
-          # 都不讓 GitHub Actions 直接失敗
-          # ==========================================================
-          problems = {}
+          LEETCODE_GRAPHQL = "https://leetcode.com/graphql"
 
-          if os.path.exists(PROBLEMS_FILE):
+
+          # ==========================================================
+          # LeetCode GraphQL Query
+          # ==========================================================
+          QUERY = """
+          query questionData($titleSlug: String!) {
+              question(titleSlug: $titleSlug) {
+                  questionFrontendId
+                  title
+                  titleSlug
+                  difficulty
+                  topicTags {
+                      name
+                      slug
+                  }
+              }
+          }
+          """
+
+
+          # ==========================================================
+          # 從檔名產生 title slug
+          #
+          # 例如：
+          #
+          # 1.two-sum.cpp
+          #       ↓
+          # two-sum
+          #
+          # 217.contains-duplicate.cpp
+          #       ↓
+          # contains-duplicate
+          # ==========================================================
+          def get_title_slug(filename):
+
+              match = re.match(
+                  r"^(\d+)\.(.+)\.cpp$",
+                  filename
+              )
+
+              if not match:
+                  return None
+
+              slug = match.group(2).lower()
+
+              # 空白 → -
+              slug = slug.replace(" ", "-")
+
+              # 底線 → -
+              slug = slug.replace("_", "-")
+
+              # 移除重複的 -
+              slug = re.sub(
+                  r"-+",
+                  "-",
+                  slug
+              )
+
+              return slug.strip("-")
+
+
+          # ==========================================================
+          # 從 LeetCode API 取得資料
+          # ==========================================================
+          def fetch_leetcode_problem(title_slug):
+
+              payload = json.dumps({
+                  "operationName": "questionData",
+                  "variables": {
+                      "titleSlug": title_slug
+                  },
+                  "query": QUERY
+              }).encode("utf-8")
+
+
+              request = urllib.request.Request(
+                  LEETCODE_GRAPHQL,
+                  data=payload,
+                  headers={
+                      "Content-Type": "application/json",
+                      "Accept": "application/json",
+                      "User-Agent": "Mozilla/5.0"
+                  },
+                  method="POST"
+              )
+
 
               try:
-                  with open(
-                      PROBLEMS_FILE,
-                      "r",
-                      encoding="utf-8"
-                  ) as f:
 
-                      content = f.read().strip()
+                  with urllib.request.urlopen(
+                      request,
+                      timeout=20
+                  ) as response:
 
-                      if content:
-                          problems = json.loads(content)
+                      data = json.loads(
+                          response.read().decode("utf-8")
+                      )
 
-                          if not isinstance(problems, dict):
-                              print(
-                                  "WARNING: problems.json "
-                                  "不是 JSON object，將使用空資料。"
-                              )
-                              problems = {}
 
-                      else:
-                          print(
-                              "WARNING: problems.json 是空的，"
-                              "將使用檔名推測題目名稱。"
-                          )
-
-              except json.JSONDecodeError as e:
-
-                  print(
-                      "WARNING: problems.json 格式錯誤："
-                  )
-                  print(e)
-                  print(
-                      "將使用檔名推測題目名稱。"
+                  question = (
+                      data
+                      .get("data", {})
+                      .get("question")
                   )
 
-          else:
-              print(
-                  "WARNING: problems.json 不存在，"
-                  "將使用檔名推測題目名稱。"
-              )
+
+                  if not question:
+                      return None
+
+
+                  return question
+
+
+              except Exception as e:
+
+                  print(
+                      f"WARNING: 無法取得 "
+                      f"{title_slug}: {e}"
+                  )
+
+                  return None
+
 
           # ==========================================================
           # 搜尋 solutions/*.cpp
@@ -118,8 +189,9 @@ jobs:
           else:
 
               print(
-                  f"WARNING: 找不到 {SOLUTIONS_DIR}/ 資料夾。"
+                  f"ERROR: 找不到 {SOLUTIONS_DIR}/"
               )
+
 
           # ==========================================================
           # 取得題號
@@ -138,20 +210,22 @@ jobs:
 
 
           # ==========================================================
-          # 按題號排序
+          # 題號排序
           # ==========================================================
           files.sort(
               key=get_number
           )
 
+
           # ==========================================================
-          # Difficulty
+          # Difficulty icon
           # ==========================================================
           difficulty_icon = {
               "Easy": "🟢 Easy",
               "Medium": "🟡 Medium",
               "Hard": "🔴 Hard"
           }
+
 
           # ==========================================================
           # Statistics
@@ -160,10 +234,20 @@ jobs:
           medium_count = 0
           hard_count = 0
 
+
           problem_rows = []
 
+
           # ==========================================================
-          # 產生 Problem Table
+          # API Cache
+          #
+          # 同一次 Action 不重複查詢相同題目
+          # ==========================================================
+          cache = {}
+
+
+          # ==========================================================
+          # 處理每一個 Solution
           # ==========================================================
           for filename in files:
 
@@ -173,38 +257,102 @@ jobs:
               )
 
               if not match:
+
                   print(
                       f"WARNING: 無法解析檔名：{filename}"
                   )
+
                   continue
 
+
               number = match.group(1)
+
               filename_title = match.group(2)
 
-              # ------------------------------------------------------
-              # 從 problems.json 取得資訊
-              # ------------------------------------------------------
-              info = problems.get(
-                  number,
-                  {}
+              title_slug = get_title_slug(
+                  filename
               )
 
-              title = info.get(
-                  "title",
-                  filename_title
+
+              # ------------------------------------------------------
+              # API
+              # ------------------------------------------------------
+              question = None
+
+
+              if title_slug:
+
+                  if title_slug in cache:
+
+                      question = cache[
+                          title_slug
+                      ]
+
+                  else:
+
+                      print(
+                          f"Fetching LeetCode #{number}: "
+                          f"{title_slug}"
+                      )
+
+                      question = fetch_leetcode_problem(
+                          title_slug
+                      )
+
+                      cache[
+                          title_slug
+                      ] = question
+
+
+              # ------------------------------------------------------
+              # 如果 API 成功
+              # ------------------------------------------------------
+              if question:
+
+                  title = question.get(
+                      "title",
+                      filename_title
+                          .replace("-", " ")
+                          .title()
+                  )
+
+                  difficulty = question.get(
+                      "difficulty",
+                      "Unknown"
+                  )
+
+                  topic_tags = question.get(
+                      "topicTags",
+                      []
+                  )
+
+                  tags = [
+                      tag.get("name", "")
+                      for tag in topic_tags
+                      if tag.get("name")
+                  ]
+
+              # ------------------------------------------------------
+              # 如果 API 失敗
+              # ------------------------------------------------------
+              else:
+
+                  print(
+                      f"WARNING: "
+                      f"使用檔名作為 fallback："
+                      f"{filename}"
+                  )
+
+                  title = (
+                      filename_title
                       .replace("-", " ")
                       .title()
-              )
+                  )
 
-              difficulty = info.get(
-                  "difficulty",
-                  "Unknown"
-              )
+                  difficulty = "Unknown"
 
-              tags = info.get(
-                  "tags",
-                  []
-              )
+                  tags = []
+
 
               # ------------------------------------------------------
               # Difficulty 統計
@@ -221,6 +369,7 @@ jobs:
 
                   hard_count += 1
 
+
               # ------------------------------------------------------
               # Difficulty 顯示
               # ------------------------------------------------------
@@ -229,20 +378,41 @@ jobs:
                   "⚪ Unknown"
               )
 
+
               # ------------------------------------------------------
               # Tags
               # ------------------------------------------------------
               if tags:
+
                   tags_display = ", ".join(tags)
+
               else:
+
                   tags_display = "-"
 
+
               # ------------------------------------------------------
-              # Solution link
+              # LeetCode URL
+              # ------------------------------------------------------
+              if title_slug:
+
+                  leetcode_link = (
+                      f"[🔗](https://leetcode.com/problems/"
+                      f"{title_slug}/)"
+                  )
+
+              else:
+
+                  leetcode_link = "-"
+
+
+              # ------------------------------------------------------
+              # Solution URL
               # ------------------------------------------------------
               solution_link = (
                   f"[C++](./solutions/{filename})"
               )
+
 
               # ------------------------------------------------------
               # README row
@@ -251,13 +421,16 @@ jobs:
                   f"| {number} | {title} | "
                   f"{difficulty_display} | "
                   f"{tags_display} | "
+                  f"{leetcode_link} | "
                   f"{solution_link} |"
               )
 
+
           # ==========================================================
-          # 最近解題
+          # Recent Solutions
           # ==========================================================
           recent_solutions = []
+
 
           for filename in files:
 
@@ -265,6 +438,7 @@ jobs:
                   SOLUTIONS_DIR,
                   filename
               )
+
 
               try:
 
@@ -282,7 +456,11 @@ jobs:
                       check=True
                   )
 
-                  date_string = result.stdout.strip()
+
+                  date_string = (
+                      result.stdout.strip()
+                  )
+
 
                   if date_string:
 
@@ -293,6 +471,7 @@ jobs:
                           )
                       )
 
+
                       recent_solutions.append(
                           (
                               date,
@@ -300,12 +479,14 @@ jobs:
                           )
                       )
 
+
               except Exception as e:
 
                   print(
-                      f"WARNING: 無法取得 "
-                      f"{filename} 的 Git 日期：{e}"
+                      f"WARNING: "
+                      f"無法取得 {filename} 日期：{e}"
                   )
+
 
           # ==========================================================
           # 最近修改排序
@@ -315,10 +496,15 @@ jobs:
               reverse=True
           )
 
-          # 只顯示最近 10 題
-          recent_solutions = recent_solutions[:10]
+
+          # 最近 10 題
+          recent_solutions = (
+              recent_solutions[:10]
+          )
+
 
           recent_rows = []
+
 
           for date, filename in recent_solutions:
 
@@ -327,74 +513,106 @@ jobs:
                   filename
               )
 
+
               if not match:
                   continue
 
+
               number = match.group(1)
 
-              info = problems.get(
-                  number,
-                  {}
+              title_slug = get_title_slug(
+                  filename
               )
 
-              title = info.get(
-                  "title",
-                  match.group(2)
+
+              question = cache.get(
+                  title_slug
+              )
+
+
+              if question:
+
+                  title = question.get(
+                      "title",
+                      match.group(2)
+                          .replace("-", " ")
+                          .title()
+                  )
+
+              else:
+
+                  title = (
+                      match.group(2)
                       .replace("-", " ")
                       .title()
-              )
+                  )
+
 
               date_display = date.strftime(
                   "%Y-%m-%d"
               )
+
 
               recent_rows.append(
                   f"| {number} | {title} | "
                   f"{date_display} |"
               )
 
+
           # ==========================================================
-          # README 開始
+          # README
           # ==========================================================
           readme_content = (
               "# 🚀 LeetCode C++ 解題紀錄\n\n"
           )
+
 
           readme_content += (
               "此 README 由 GitHub Actions "
               "自動產生與維護。\n\n"
           )
 
+
           # ==========================================================
           # Progress
           # ==========================================================
           total = len(files)
 
-          readme_content += "## 📊 Progress\n\n"
+
+          readme_content += (
+              "## 📊 Progress\n\n"
+          )
+
 
           readme_content += (
               "| 難度 | 題數 |\n"
           )
 
+
           readme_content += (
               "| :---: | ---: |\n"
           )
+
 
           readme_content += (
               f"| 🟢 Easy | {easy_count} |\n"
           )
 
+
           readme_content += (
               f"| 🟡 Medium | {medium_count} |\n"
           )
+
 
           readme_content += (
               f"| 🔴 Hard | {hard_count} |\n"
           )
 
+
           readme_content += (
               f"| **Total** | **{total}** |\n\n"
           )
+
 
           # ==========================================================
           # Problems
@@ -403,18 +621,28 @@ jobs:
               "## 📚 Problems\n\n"
           )
 
-          readme_content += (
-              "| 題號 | 題目名稱 | 難度 | Tags | 解答 |\n"
-          )
 
           readme_content += (
-              "| :---: | :--- | :---: | :--- | :---: |\n"
+              "| 題號 | 題目名稱 | 難度 | Tags | "
+              "LeetCode | 解答 |\n"
           )
+
+
+          readme_content += (
+              "| :---: | :--- | :---: | :--- | "
+              ":---: | :---: |\n"
+          )
+
 
           for row in problem_rows:
-              readme_content += row + "\n"
+
+              readme_content += (
+                  row + "\n"
+              )
+
 
           readme_content += "\n"
+
 
           # ==========================================================
           # Recent Solutions
@@ -423,18 +651,24 @@ jobs:
               "## 🔥 Recent Solutions\n\n"
           )
 
+
           if recent_rows:
 
               readme_content += (
                   "| 題號 | 題目名稱 | 解題日期 |\n"
               )
 
+
               readme_content += (
                   "| :---: | :--- | :---: |\n"
               )
 
+
               for row in recent_rows:
-                  readme_content += row + "\n"
+
+                  readme_content += (
+                      row + "\n"
+                  )
 
           else:
 
@@ -442,10 +676,12 @@ jobs:
                   "目前沒有解題紀錄。\n"
               )
 
+
           readme_content += "\n"
 
+
           # ==========================================================
-          # 寫入 README
+          # Write README
           # ==========================================================
           with open(
               README_FILE,
@@ -456,6 +692,7 @@ jobs:
               f.write(
                   readme_content
               )
+
 
           # ==========================================================
           # GitHub Actions Log
@@ -473,7 +710,7 @@ jobs:
           PY
 
       # ============================================================
-      # Commit and Push
+      # Commit and Push README
       # ============================================================
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
