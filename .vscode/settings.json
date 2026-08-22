@@ -1,0 +1,23 @@
+{
+  // 1. 完全關閉 C/C++ 引擎的自動補全功能 (關鍵)
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
+
+  // 2. 關閉 VS Code 通用編輯器補全提示
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.wordBasedSuggestions": "off",
+  "editor.snippetSuggestions": "none",
+
+  // 3. 關閉 AI / Copilot 行內灰色文字補全
+  "editor.inlineSuggest.enabled": false,
+
+  // 4. 關閉括號與引號自動補全
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never"
+}
