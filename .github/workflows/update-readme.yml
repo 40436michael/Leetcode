@@ -1,0 +1,46 @@
+name: Auto Update LeetCode README
+
+on:
+  push:
+    branches:
+      - main  # 如果你的預設分支是 master，請改成 master
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate README Table
+        run: |
+          python -c '
+          import os, re
+
+          files = [f for f in os.listdir(".") if f.endswith(".cpp")]
+          files.sort(key=lambda x: int(re.search(r"^\d+", x).group()) if re.search(r"^\d+", x) else 999999)
+
+          readme_content = "# LeetCode C++ 解題紀錄\n\n"
+          readme_content += "此表格由 GitHub Actions 自動維護更新。\n\n"
+          readme_content += "| 題號 | 題目名稱 | 檔案連結 |\n"
+          readme_content += "| :---: | :--- | :---: |\n"
+
+          for f in files:
+              match = re.match(r"^(\d+)\.(.+)\.cpp$", f)
+              if match:
+                  num, name = match.group(1), match.group(2).replace("-", " ").title()
+                  readme_content += f"| {num} | {name} | [{f}](./{f}) |\n"
+
+          with open("README.md", "w", encoding="utf-8") as file:
+              file.write(readme_content)
+          '
+
+      - name: Commit and Push Changes
+        uses: stefafan/auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update README.md [skip ci]"
