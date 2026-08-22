@@ -3,49 +3,314 @@ name: Auto Update LeetCode README
 on:
   push:
     branches:
-      - main  # 若你的分支名稱是 master，請改成 master
+      - main
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
 
-    # 必須給予修改儲存庫檔案的權限
     permissions:
       contents: write
 
     steps:
+      # ============================================================
+      # Checkout
+      # ============================================================
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # ============================================================
+      # Python
+      # ============================================================
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
-      - name: Generate README Table
+      # ============================================================
+      # Generate README
+      # ============================================================
+      - name: Generate README
         run: |
-          python -c '
-          import os, re
+          python <<'PY'
+          import os
+          import re
+          import json
+          import subprocess
+          from datetime import datetime
 
-          files = [f for f in os.listdir(".") if f.endswith(".cpp")]
-          files.sort(key=lambda x: int(re.search(r"^\d+", x).group()) if re.search(r"^\d+", x) else 999999)
+          # ==========================================================
+          # 設定
+          # ==========================================================
+          SOLUTIONS_DIR = "solutions"
+          PROBLEMS_FILE = "problems.json"
+          README_FILE = "README.md"
 
-          readme_content = "# 🚀 LeetCode C++ 解題紀錄\n\n"
-          readme_content += "此表格由 GitHub Actions 自動維護更新。\n\n"
-          readme_content += "| 題號 | 題目名稱 | 檔案連結 |\n"
-          readme_content += "| :---: | :--- | :---: |\n"
+          # ==========================================================
+          # 讀取題目資訊
+          # ==========================================================
+          if os.path.exists(PROBLEMS_FILE):
+              with open(PROBLEMS_FILE, "r", encoding="utf-8") as f:
+                  problems = json.load(f)
+          else:
+              problems = {}
 
-          for f in files:
-              match = re.match(r"^(\d+)\.(.+)\.cpp$", f)
-              if match:
-                  num, name = match.group(1), match.group(2).replace("-", " ").title()
-                  readme_content += f"| {num} | {name} | [{f}](./{f}) |\n"
+          # ==========================================================
+          # 找出 solutions 裡所有 cpp
+          # ==========================================================
+          files = []
 
-          with open("README.md", "w", encoding="utf-8") as file:
-              file.write(readme_content)
-          '
+          if os.path.exists(SOLUTIONS_DIR):
+              for filename in os.listdir(SOLUTIONS_DIR):
+                  if filename.endswith(".cpp"):
+                      files.append(filename)
 
-      # 修正套件名稱：stefanzweifel/git-auto-commit-action
+          # ==========================================================
+          # 按照 LeetCode 題號排序
+          # ==========================================================
+          def get_number(filename):
+              match = re.match(r"^(\d+)", filename)
+              return int(match.group(1)) if match else 999999
+
+          files.sort(key=get_number)
+
+          # ==========================================================
+          # Difficulty 顯示
+          # ==========================================================
+          difficulty_icon = {
+              "Easy": "🟢 Easy",
+              "Medium": "🟡 Medium",
+              "Hard": "🔴 Hard"
+          }
+
+          # ==========================================================
+          # 統計
+          # ==========================================================
+          easy_count = 0
+          medium_count = 0
+          hard_count = 0
+
+          problem_rows = []
+
+          for filename in files:
+
+              match = re.match(r"^(\d+)\.(.+)\.cpp$", filename)
+
+              if not match:
+                  continue
+
+              number = match.group(1)
+              filename_title = match.group(2)
+
+              # ------------------------------------------------------
+              # 從 problems.json 取得資料
+              # ------------------------------------------------------
+              info = problems.get(number, {})
+
+              title = info.get(
+                  "title",
+                  filename_title.replace("-", " ").title()
+              )
+
+              difficulty = info.get("difficulty", "Unknown")
+
+              tags = info.get("tags", [])
+
+              # ------------------------------------------------------
+              # 統計 Difficulty
+              # ------------------------------------------------------
+              if difficulty == "Easy":
+                  easy_count += 1
+              elif difficulty == "Medium":
+                  medium_count += 1
+              elif difficulty == "Hard":
+                  hard_count += 1
+
+              # ------------------------------------------------------
+              # Difficulty icon
+              # ------------------------------------------------------
+              difficulty_display = difficulty_icon.get(
+                  difficulty,
+                  "⚪ Unknown"
+              )
+
+              # ------------------------------------------------------
+              # Tags
+              # ------------------------------------------------------
+              tags_display = ", ".join(tags) if tags else "-"
+
+              # ------------------------------------------------------
+              # Solution link
+              # ------------------------------------------------------
+              solution_link = f"[C++](./solutions/{filename})"
+
+              problem_rows.append(
+                  f"| {number} | {title} | {difficulty_display} | "
+                  f"{tags_display} | {solution_link} |"
+              )
+
+          # ==========================================================
+          # 最近解題
+          # ==========================================================
+          recent_solutions = []
+
+          for filename in files:
+
+              try:
+                  filepath = os.path.join(SOLUTIONS_DIR, filename)
+
+                  result = subprocess.run(
+                      [
+                          "git",
+                          "log",
+                          "-1",
+                          "--format=%aI",
+                          "--",
+                          filepath
+                      ],
+                      capture_output=True,
+                      text=True,
+                      check=True
+                  )
+
+                  date_string = result.stdout.strip()
+
+                  if date_string:
+                      date = datetime.fromisoformat(
+                          date_string.replace("Z", "+00:00")
+                      )
+
+                      recent_solutions.append(
+                          (date, filename)
+                      )
+
+              except Exception:
+                  pass
+
+          # ==========================================================
+          # 按最後修改時間排序
+          # ==========================================================
+          recent_solutions.sort(
+              key=lambda x: x[0],
+              reverse=True
+          )
+
+          recent_solutions = recent_solutions[:10]
+
+          recent_rows = []
+
+          for date, filename in recent_solutions:
+
+              match = re.match(
+                  r"^(\d+)\.(.+)\.cpp$",
+                  filename
+              )
+
+              if not match:
+                  continue
+
+              number = match.group(1)
+
+              info = problems.get(number, {})
+
+              title = info.get(
+                  "title",
+                  match.group(2).replace("-", " ").title()
+              )
+
+              date_display = date.strftime("%Y-%m-%d")
+
+              recent_rows.append(
+                  f"| {number} | {title} | {date_display} |"
+              )
+
+          # ==========================================================
+          # README
+          # ==========================================================
+          readme_content = "# LeetCode C++ 解題紀錄\n\n"
+
+          readme_content += (
+              "此 README 由 GitHub Actions 自動產生與維護。\n\n"
+          )
+
+          # ==========================================================
+          # Progress
+          # ==========================================================
+          total = easy_count + medium_count + hard_count
+
+          readme_content += "## Progress\n\n"
+
+          readme_content += "| 難度 | 題數 |\n"
+          readme_content += "| :---: | ---: |\n"
+          readme_content += f"| 🟢 Easy | {easy_count} |\n"
+          readme_content += f"| 🟡 Medium | {medium_count} |\n"
+          readme_content += f"| 🔴 Hard | {hard_count} |\n"
+          readme_content += f"| **Total** | **{total}** |\n\n"
+
+          # ==========================================================
+          # Problem List
+          # ==========================================================
+          readme_content += "## Problems\n\n"
+
+          readme_content += (
+              "| 題號 | 題目名稱 | 難度 | Tags | 解答 |\n"
+          )
+
+          readme_content += (
+              "| :---: | :--- | :---: | :--- | :---: |\n"
+          )
+
+          for row in problem_rows:
+              readme_content += row + "\n"
+
+          readme_content += "\n"
+
+          # ==========================================================
+          # Recent Solutions
+          # ==========================================================
+          readme_content += "## 🔥 Recent Solutions\n\n"
+
+          if recent_rows:
+
+              readme_content += (
+                  "| 題號 | 題目名稱 | 解題日期 |\n"
+              )
+
+              readme_content += (
+                  "| :---: | :--- | :---: |\n"
+              )
+
+              for row in recent_rows:
+                  readme_content += row + "\n"
+
+          else:
+              readme_content += "目前沒有解題紀錄。\n"
+
+          readme_content += "\n"
+
+          # ==========================================================
+          # Write README
+          # ==========================================================
+          with open(
+              README_FILE,
+              "w",
+              encoding="utf-8"
+          ) as f:
+              f.write(readme_content)
+
+          print("README updated successfully.")
+          print(f"Total solutions: {len(files)}")
+          print(f"Easy: {easy_count}")
+          print(f"Medium: {medium_count}")
+          print(f"Hard: {hard_count}")
+
+          PY
+
+      # ============================================================
+      # Commit README
+      # ============================================================
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
