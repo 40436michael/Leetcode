@@ -41,6 +41,6 @@ jobs:
           '
 
       - name: Commit and Push Changes
-        uses: stefafan/auto-commit-action@v5
+        uses: stefanzweifel/auto-commit-action@v5
         with:
           commit_message: "docs: auto-update README.md [skip ci]"
