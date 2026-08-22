@@ -3,11 +3,16 @@ name: Auto Update LeetCode README
 on:
   push:
     branches:
-      - main  # 如果你的預設分支是 master，請改成 master
+      - main  # 若你的分支名稱是 master，請改成 master
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
+    # 必須給予修改儲存庫檔案的權限
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -25,7 +30,7 @@ jobs:
           files = [f for f in os.listdir(".") if f.endswith(".cpp")]
           files.sort(key=lambda x: int(re.search(r"^\d+", x).group()) if re.search(r"^\d+", x) else 999999)
 
-          readme_content = "# LeetCode C++ 解題紀錄\n\n"
+          readme_content = "# 🚀 LeetCode C++ 解題紀錄\n\n"
           readme_content += "此表格由 GitHub Actions 自動維護更新。\n\n"
           readme_content += "| 題號 | 題目名稱 | 檔案連結 |\n"
           readme_content += "| :---: | :--- | :---: |\n"
@@ -40,7 +45,8 @@ jobs:
               file.write(readme_content)
           '
 
+      # 修正套件名稱：stefanzweifel/git-auto-commit-action
       - name: Commit and Push Changes
-        uses: stefanzweifel/auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: auto-update README.md [skip ci]"
