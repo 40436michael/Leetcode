@@ -14,7 +14,7 @@ jobs:
 
     steps:
       # ============================================================
-      # Checkout
+      # Checkout Repository
       # ============================================================
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       # ============================================================
-      # Python
+      # Set up Python
       # ============================================================
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,35 +49,103 @@ jobs:
           README_FILE = "README.md"
 
           # ==========================================================
-          # 讀取題目資訊
+          # 讀取 problems.json
+          #
+          # 即使：
+          # 1. problems.json 不存在
+          # 2. problems.json 是空的
+          # 3. problems.json 格式錯誤
+          #
+          # 都不讓 GitHub Actions 直接失敗
           # ==========================================================
+          problems = {}
+
           if os.path.exists(PROBLEMS_FILE):
-              with open(PROBLEMS_FILE, "r", encoding="utf-8") as f:
-                  problems = json.load(f)
+
+              try:
+                  with open(
+                      PROBLEMS_FILE,
+                      "r",
+                      encoding="utf-8"
+                  ) as f:
+
+                      content = f.read().strip()
+
+                      if content:
+                          problems = json.loads(content)
+
+                          if not isinstance(problems, dict):
+                              print(
+                                  "WARNING: problems.json "
+                                  "不是 JSON object，將使用空資料。"
+                              )
+                              problems = {}
+
+                      else:
+                          print(
+                              "WARNING: problems.json 是空的，"
+                              "將使用檔名推測題目名稱。"
+                          )
+
+              except json.JSONDecodeError as e:
+
+                  print(
+                      "WARNING: problems.json 格式錯誤："
+                  )
+                  print(e)
+                  print(
+                      "將使用檔名推測題目名稱。"
+                  )
+
           else:
-              problems = {}
+              print(
+                  "WARNING: problems.json 不存在，"
+                  "將使用檔名推測題目名稱。"
+              )
 
           # ==========================================================
-          # 找出 solutions 裡所有 cpp
+          # 搜尋 solutions/*.cpp
           # ==========================================================
           files = []
 
-          if os.path.exists(SOLUTIONS_DIR):
+          if os.path.isdir(SOLUTIONS_DIR):
+
               for filename in os.listdir(SOLUTIONS_DIR):
+
                   if filename.endswith(".cpp"):
                       files.append(filename)
 
+          else:
+
+              print(
+                  f"WARNING: 找不到 {SOLUTIONS_DIR}/ 資料夾。"
+              )
+
           # ==========================================================
-          # 按照 LeetCode 題號排序
+          # 取得題號
           # ==========================================================
           def get_number(filename):
-              match = re.match(r"^(\d+)", filename)
-              return int(match.group(1)) if match else 999999
 
-          files.sort(key=get_number)
+              match = re.match(
+                  r"^(\d+)",
+                  filename
+              )
+
+              if match:
+                  return int(match.group(1))
+
+              return 999999
+
 
           # ==========================================================
-          # Difficulty 顯示
+          # 按題號排序
+          # ==========================================================
+          files.sort(
+              key=get_number
+          )
+
+          # ==========================================================
+          # Difficulty
           # ==========================================================
           difficulty_icon = {
               "Easy": "🟢 Easy",
@@ -86,7 +154,7 @@ jobs:
           }
 
           # ==========================================================
-          # 統計
+          # Statistics
           # ==========================================================
           easy_count = 0
           medium_count = 0
@@ -94,42 +162,67 @@ jobs:
 
           problem_rows = []
 
+          # ==========================================================
+          # 產生 Problem Table
+          # ==========================================================
           for filename in files:
 
-              match = re.match(r"^(\d+)\.(.+)\.cpp$", filename)
+              match = re.match(
+                  r"^(\d+)\.(.+)\.cpp$",
+                  filename
+              )
 
               if not match:
+                  print(
+                      f"WARNING: 無法解析檔名：{filename}"
+                  )
                   continue
 
               number = match.group(1)
               filename_title = match.group(2)
 
               # ------------------------------------------------------
-              # 從 problems.json 取得資料
+              # 從 problems.json 取得資訊
               # ------------------------------------------------------
-              info = problems.get(number, {})
+              info = problems.get(
+                  number,
+                  {}
+              )
 
               title = info.get(
                   "title",
-                  filename_title.replace("-", " ").title()
+                  filename_title
+                      .replace("-", " ")
+                      .title()
               )
 
-              difficulty = info.get("difficulty", "Unknown")
+              difficulty = info.get(
+                  "difficulty",
+                  "Unknown"
+              )
 
-              tags = info.get("tags", [])
+              tags = info.get(
+                  "tags",
+                  []
+              )
 
               # ------------------------------------------------------
-              # 統計 Difficulty
+              # Difficulty 統計
               # ------------------------------------------------------
               if difficulty == "Easy":
+
                   easy_count += 1
+
               elif difficulty == "Medium":
+
                   medium_count += 1
+
               elif difficulty == "Hard":
+
                   hard_count += 1
 
               # ------------------------------------------------------
-              # Difficulty icon
+              # Difficulty 顯示
               # ------------------------------------------------------
               difficulty_display = difficulty_icon.get(
                   difficulty,
@@ -139,16 +232,26 @@ jobs:
               # ------------------------------------------------------
               # Tags
               # ------------------------------------------------------
-              tags_display = ", ".join(tags) if tags else "-"
+              if tags:
+                  tags_display = ", ".join(tags)
+              else:
+                  tags_display = "-"
 
               # ------------------------------------------------------
               # Solution link
               # ------------------------------------------------------
-              solution_link = f"[C++](./solutions/{filename})"
+              solution_link = (
+                  f"[C++](./solutions/{filename})"
+              )
 
+              # ------------------------------------------------------
+              # README row
+              # ------------------------------------------------------
               problem_rows.append(
-                  f"| {number} | {title} | {difficulty_display} | "
-                  f"{tags_display} | {solution_link} |"
+                  f"| {number} | {title} | "
+                  f"{difficulty_display} | "
+                  f"{tags_display} | "
+                  f"{solution_link} |"
               )
 
           # ==========================================================
@@ -158,8 +261,12 @@ jobs:
 
           for filename in files:
 
+              filepath = os.path.join(
+                  SOLUTIONS_DIR,
+                  filename
+              )
+
               try:
-                  filepath = os.path.join(SOLUTIONS_DIR, filename)
 
                   result = subprocess.run(
                       [
@@ -178,25 +285,37 @@ jobs:
                   date_string = result.stdout.strip()
 
                   if date_string:
+
                       date = datetime.fromisoformat(
-                          date_string.replace("Z", "+00:00")
+                          date_string.replace(
+                              "Z",
+                              "+00:00"
+                          )
                       )
 
                       recent_solutions.append(
-                          (date, filename)
+                          (
+                              date,
+                              filename
+                          )
                       )
 
-              except Exception:
-                  pass
+              except Exception as e:
+
+                  print(
+                      f"WARNING: 無法取得 "
+                      f"{filename} 的 Git 日期：{e}"
+                  )
 
           # ==========================================================
-          # 按最後修改時間排序
+          # 最近修改排序
           # ==========================================================
           recent_solutions.sort(
               key=lambda x: x[0],
               reverse=True
           )
 
+          # 只顯示最近 10 題
           recent_solutions = recent_solutions[:10]
 
           recent_rows = []
@@ -213,46 +332,76 @@ jobs:
 
               number = match.group(1)
 
-              info = problems.get(number, {})
+              info = problems.get(
+                  number,
+                  {}
+              )
 
               title = info.get(
                   "title",
-                  match.group(2).replace("-", " ").title()
+                  match.group(2)
+                      .replace("-", " ")
+                      .title()
               )
 
-              date_display = date.strftime("%Y-%m-%d")
+              date_display = date.strftime(
+                  "%Y-%m-%d"
+              )
 
               recent_rows.append(
-                  f"| {number} | {title} | {date_display} |"
+                  f"| {number} | {title} | "
+                  f"{date_display} |"
               )
 
           # ==========================================================
-          # README
+          # README 開始
           # ==========================================================
-          readme_content = "# LeetCode C++ 解題紀錄\n\n"
+          readme_content = (
+              "# 🚀 LeetCode C++ 解題紀錄\n\n"
+          )
 
           readme_content += (
-              "此 README 由 GitHub Actions 自動產生與維護。\n\n"
+              "此 README 由 GitHub Actions "
+              "自動產生與維護。\n\n"
           )
 
           # ==========================================================
           # Progress
           # ==========================================================
-          total = easy_count + medium_count + hard_count
+          total = len(files)
 
-          readme_content += "## Progress\n\n"
+          readme_content += "## 📊 Progress\n\n"
 
-          readme_content += "| 難度 | 題數 |\n"
-          readme_content += "| :---: | ---: |\n"
-          readme_content += f"| 🟢 Easy | {easy_count} |\n"
-          readme_content += f"| 🟡 Medium | {medium_count} |\n"
-          readme_content += f"| 🔴 Hard | {hard_count} |\n"
-          readme_content += f"| **Total** | **{total}** |\n\n"
+          readme_content += (
+              "| 難度 | 題數 |\n"
+          )
+
+          readme_content += (
+              "| :---: | ---: |\n"
+          )
+
+          readme_content += (
+              f"| 🟢 Easy | {easy_count} |\n"
+          )
+
+          readme_content += (
+              f"| 🟡 Medium | {medium_count} |\n"
+          )
+
+          readme_content += (
+              f"| 🔴 Hard | {hard_count} |\n"
+          )
+
+          readme_content += (
+              f"| **Total** | **{total}** |\n\n"
+          )
 
           # ==========================================================
-          # Problem List
+          # Problems
           # ==========================================================
-          readme_content += "## Problems\n\n"
+          readme_content += (
+              "## 📚 Problems\n\n"
+          )
 
           readme_content += (
               "| 題號 | 題目名稱 | 難度 | Tags | 解答 |\n"
@@ -270,7 +419,9 @@ jobs:
           # ==========================================================
           # Recent Solutions
           # ==========================================================
-          readme_content += "## 🔥 Recent Solutions\n\n"
+          readme_content += (
+              "## 🔥 Recent Solutions\n\n"
+          )
 
           if recent_rows:
 
@@ -286,30 +437,43 @@ jobs:
                   readme_content += row + "\n"
 
           else:
-              readme_content += "目前沒有解題紀錄。\n"
+
+              readme_content += (
+                  "目前沒有解題紀錄。\n"
+              )
 
           readme_content += "\n"
 
           # ==========================================================
-          # Write README
+          # 寫入 README
           # ==========================================================
           with open(
               README_FILE,
               "w",
               encoding="utf-8"
           ) as f:
-              f.write(readme_content)
 
-          print("README updated successfully.")
-          print(f"Total solutions: {len(files)}")
-          print(f"Easy: {easy_count}")
-          print(f"Medium: {medium_count}")
-          print(f"Hard: {hard_count}")
+              f.write(
+                  readme_content
+              )
+
+          # ==========================================================
+          # GitHub Actions Log
+          # ==========================================================
+          print("")
+          print("=" * 60)
+          print("README updated successfully!")
+          print("=" * 60)
+          print(f"Solutions: {total}")
+          print(f"Easy:      {easy_count}")
+          print(f"Medium:    {medium_count}")
+          print(f"Hard:      {hard_count}")
+          print("=" * 60)
 
           PY
 
       # ============================================================
-      # Commit README
+      # Commit and Push
       # ============================================================
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
