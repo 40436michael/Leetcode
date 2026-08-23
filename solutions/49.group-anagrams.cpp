@@ -29,7 +29,6 @@ public:
             if(!found_anagrams){
                 ans.push_back({strs[i]});
             }
-
         }
         return ans;        
     }
