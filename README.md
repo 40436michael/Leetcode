@@ -13,6 +13,8 @@
 
 ## 📌 需要複習
 
+在 .cpp 檔案裡加上 `// @status: unfamiliar` 即可自動列在這裡；練熟後把這行刪掉即可。
+
 | 題號 | 題目名稱 | LeetCode | 解答 |
 | :---: | :--- | :---: | :---: |
 | 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
