@@ -773,6 +773,12 @@ jobs:
           )
 
 
+          readme_content += (
+              "在 .cpp 檔案裡加上 `// @status: unfamiliar` "
+              "即可自動列在這裡；練熟後把這行刪掉即可。\n\n"
+          )
+
+
           if unfamiliar_problems:
 
               readme_content += (
