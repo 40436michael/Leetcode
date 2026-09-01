@@ -24,7 +24,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
-| 49 | Group Anagrams | 2026-08-23 |
+| 49 | Group Anagrams | 2026-09-01 |
 | 1 | Two Sum | 2026-08-22 |
 | 217 | Contains Duplicate | 2026-08-22 |
 | 242 | Valid Anagram | 2026-08-22 |
