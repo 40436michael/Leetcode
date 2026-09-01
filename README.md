@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 3 |
-| 🟡 Medium | 1 |
+| 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
-| **Total** | **4** |
+| **Total** | **5** |
 
 ## 📌 需要複習
 
@@ -18,15 +18,21 @@
 | 題號 | 題目名稱 | LeetCode | 解答 |
 | :---: | :--- | :---: | :---: |
 | 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
+| 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 
 ## 🏷️ Tags 統計
 
 | Tag | 題數 |
 | :--- | ---: |
-| Hash Table | 4 |
-| Array | 3 |
-| Sorting | 3 |
+| Hash Table | 5 |
+| Array | 4 |
+| Sorting | 4 |
 | String | 2 |
+| Bucket Sort | 1 |
+| Counting | 1 |
+| Divide and Conquer | 1 |
+| Heap (Priority Queue) | 1 |
+| Quickselect | 1 |
 
 ## 📚 Problems
 
@@ -36,11 +42,13 @@
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
+| 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 
 ## 🔥 Recent Solutions
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 347 | Top K Frequent Elements | 2026-09-02 |
 | 49 | Group Anagrams | 2026-09-01 |
 | 1 | Two Sum | 2026-08-22 |
 | 217 | Contains Duplicate | 2026-08-22 |
