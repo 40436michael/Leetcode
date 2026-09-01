@@ -4,6 +4,8 @@
  * [49] Group Anagrams
  */
 
+// @status: unfamiliar
+
 // @lc code=start
 class Solution {
 public:

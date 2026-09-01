@@ -120,6 +120,84 @@ jobs:
 
 
           # ==========================================================
+          # 同一題目重寫過幾次
+          #
+          # 用該檔案的 git commit 數量計算
+          # ==========================================================
+          def get_attempt_count(filepath):
+
+              try:
+
+                  result = subprocess.run(
+                      [
+                          "git",
+                          "log",
+                          "--follow",
+                          "--format=%H",
+                          "--",
+                          filepath
+                      ],
+                      capture_output=True,
+                      text=True,
+                      check=True
+                  )
+
+                  commits = [
+                      line
+                      for line in result.stdout.splitlines()
+                      if line.strip()
+                  ]
+
+                  return len(commits) if commits else 1
+
+              except Exception as e:
+
+                  print(
+                      f"WARNING: "
+                      f"無法取得 {filepath} 次數：{e}"
+                  )
+
+                  return 1
+
+
+          # ==========================================================
+          # 是否標記為「不熟」
+          #
+          # 在 .cpp 檔案裡任何位置加上：
+          #   // @status: unfamiliar
+          # 拿掉這行代表已經熟了
+          # ==========================================================
+          def is_unfamiliar(filepath):
+
+              try:
+
+                  with open(
+                      filepath,
+                      "r",
+                      encoding="utf-8"
+                  ) as f:
+
+                      content = f.read()
+
+              except Exception as e:
+
+                  print(
+                      f"WARNING: "
+                      f"無法讀取 {filepath}：{e}"
+                  )
+
+                  return False
+
+              return bool(
+                  re.search(
+                      r"@status:\s*unfamiliar",
+                      content,
+                      re.IGNORECASE
+                  )
+              )
+
+
+          # ==========================================================
           # 從 LeetCode API 取得資料
           # ==========================================================
           def fetch_leetcode_problem(title_slug):
@@ -280,6 +358,23 @@ jobs:
                   filename
               )
 
+              filepath = os.path.join(
+                  SOLUTIONS_DIR,
+                  filename
+              )
+
+
+              # ------------------------------------------------------
+              # 不熟標記 / 重寫次數
+              # ------------------------------------------------------
+              unfamiliar = is_unfamiliar(
+                  filepath
+              )
+
+              attempts = get_attempt_count(
+                  filepath
+              )
+
 
               # ------------------------------------------------------
               # API
@@ -387,6 +482,20 @@ jobs:
 
 
               # ------------------------------------------------------
+              # 不熟標記顯示
+              # ------------------------------------------------------
+              status_display = (
+                  "⚠️ 不熟" if unfamiliar else "-"
+              )
+
+
+              # ------------------------------------------------------
+              # 重寫次數顯示
+              # ------------------------------------------------------
+              attempts_display = str(attempts)
+
+
+              # ------------------------------------------------------
               # Tags
               # ------------------------------------------------------
               if tags:
@@ -427,6 +536,8 @@ jobs:
               problem_rows.append(
                   f"| {number} | {title} | "
                   f"{difficulty_display} | "
+                  f"{status_display} | "
+                  f"{attempts_display} | "
                   f"{tags_display} | "
                   f"{leetcode_link} | "
                   f"{solution_link} |"
@@ -630,13 +741,13 @@ jobs:
 
 
           readme_content += (
-              "| 題號 | 題目名稱 | 難度 | Tags | "
+              "| 題號 | 題目名稱 | 難度 | 狀態 | 次數 | Tags | "
               "LeetCode | 解答 |\n"
           )
 
 
           readme_content += (
-              "| :---: | :--- | :---: | :--- | "
+              "| :---: | :--- | :---: | :---: | :---: | :--- | "
               ":---: | :---: |\n"
           )
 
