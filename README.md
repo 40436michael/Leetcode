@@ -11,6 +11,21 @@
 | 🔴 Hard | 0 |
 | **Total** | **4** |
 
+## 📌 需要複習
+
+| 題號 | 題目名稱 | LeetCode | 解答 |
+| :---: | :--- | :---: | :---: |
+| 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
+
+## 🏷️ Tags 統計
+
+| Tag | 題數 |
+| :--- | ---: |
+| Hash Table | 4 |
+| Array | 3 |
+| Sorting | 3 |
+| String | 2 |
+
 ## 📚 Problems
 
 | 題號 | 題目名稱 | 難度 | 狀態 | 次數 | Tags | LeetCode | 解答 |
