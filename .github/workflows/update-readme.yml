@@ -324,6 +324,14 @@ jobs:
 
 
           # ==========================================================
+          # 不熟清單 / Tags 統計
+          # ==========================================================
+          unfamiliar_problems = []
+
+          tag_counts = {}
+
+
+          # ==========================================================
           # API Cache
           #
           # 同一次 Action 不重複查詢相同題目
@@ -457,6 +465,16 @@ jobs:
 
 
               # ------------------------------------------------------
+              # Tags 統計
+              # ------------------------------------------------------
+              for tag in tags:
+
+                  tag_counts[tag] = (
+                      tag_counts.get(tag, 0) + 1
+                  )
+
+
+              # ------------------------------------------------------
               # Difficulty 統計
               # ------------------------------------------------------
               if difficulty == "Easy":
@@ -542,6 +560,21 @@ jobs:
                   f"{leetcode_link} | "
                   f"{solution_link} |"
               )
+
+
+              # ------------------------------------------------------
+              # 不熟清單
+              # ------------------------------------------------------
+              if unfamiliar:
+
+                  unfamiliar_problems.append(
+                      (
+                          number,
+                          title,
+                          leetcode_link,
+                          solution_link
+                      )
+                  )
 
 
           # ==========================================================
@@ -733,6 +766,91 @@ jobs:
 
 
           # ==========================================================
+          # 需要複習（不熟）
+          # ==========================================================
+          readme_content += (
+              "## 📌 需要複習\n\n"
+          )
+
+
+          if unfamiliar_problems:
+
+              readme_content += (
+                  "| 題號 | 題目名稱 | LeetCode | 解答 |\n"
+              )
+
+
+              readme_content += (
+                  "| :---: | :--- | :---: | :---: |\n"
+              )
+
+
+              for (
+                  number,
+                  title,
+                  leetcode_link,
+                  solution_link
+              ) in unfamiliar_problems:
+
+                  readme_content += (
+                      f"| {number} | {title} | "
+                      f"{leetcode_link} | "
+                      f"{solution_link} |\n"
+                  )
+
+          else:
+
+              readme_content += (
+                  "目前沒有標記不熟的題目 🎉\n"
+              )
+
+
+          readme_content += "\n"
+
+
+          # ==========================================================
+          # Tags 統計
+          # ==========================================================
+          readme_content += (
+              "## 🏷️ Tags 統計\n\n"
+          )
+
+
+          if tag_counts:
+
+              sorted_tags = sorted(
+                  tag_counts.items(),
+                  key=lambda item: (-item[1], item[0])
+              )
+
+
+              readme_content += (
+                  "| Tag | 題數 |\n"
+              )
+
+
+              readme_content += (
+                  "| :--- | ---: |\n"
+              )
+
+
+              for tag_name, count in sorted_tags:
+
+                  readme_content += (
+                      f"| {tag_name} | {count} |\n"
+                  )
+
+          else:
+
+              readme_content += (
+                  "目前沒有 Tag 資料。\n"
+              )
+
+
+          readme_content += "\n"
+
+
+          # ==========================================================
           # Problems
           # ==========================================================
           readme_content += (
@@ -823,6 +941,7 @@ jobs:
           print(f"Easy:      {easy_count}")
           print(f"Medium:    {medium_count}")
           print(f"Hard:      {hard_count}")
+          print(f"Unfamiliar: {len(unfamiliar_problems)}")
           print("=" * 60)
 
           PY
