@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 3 |
+| 🟢 Easy | 4 |
 | 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
-| **Total** | **5** |
+| **Total** | **6** |
 
 ## 📌 需要複習
 
@@ -24,14 +24,15 @@
 
 | Tag | 題數 |
 | :--- | ---: |
+| Array | 5 |
 | Hash Table | 5 |
-| Array | 4 |
 | Sorting | 4 |
 | String | 2 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
 | Heap (Priority Queue) | 1 |
+| Math | 1 |
 | Quickselect | 1 |
 
 ## 📚 Problems
@@ -43,11 +44,13 @@
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
+| 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
 
 ## 🔥 Recent Solutions
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3875 | Construct Uniform Parity Array I | 2026-09-02 |
 | 347 | Top K Frequent Elements | 2026-09-02 |
 | 49 | Group Anagrams | 2026-09-01 |
 | 1 | Two Sum | 2026-08-22 |
