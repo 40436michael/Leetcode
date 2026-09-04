@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 4 |
-| 🟡 Medium | 2 |
+| 🟡 Medium | 3 |
 | 🔴 Hard | 0 |
-| **Total** | **6** |
+| **Total** | **7** |
 
 ## 📌 需要複習
 
@@ -24,7 +24,7 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 5 |
+| Array | 6 |
 | Hash Table | 5 |
 | Sorting | 4 |
 | String | 2 |
@@ -33,6 +33,7 @@
 | Divide and Conquer | 1 |
 | Heap (Priority Queue) | 1 |
 | Math | 1 |
+| Prefix Sum | 1 |
 | Quickselect | 1 |
 
 ## 📚 Problems
@@ -42,6 +43,7 @@
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
+| 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -50,6 +52,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 238 | Product of Array Except Self | 2026-09-02 |
 | 3875 | Construct Uniform Parity Array I | 2026-09-02 |
 | 347 | Top K Frequent Elements | 2026-09-02 |
 | 49 | Group Anagrams | 2026-09-01 |
