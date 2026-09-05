@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 4 |
+| 🟢 Easy | 5 |
 | 🟡 Medium | 4 |
 | 🔴 Hard | 0 |
-| **Total** | **8** |
+| **Total** | **9** |
 
 ## 📌 需要複習
 
@@ -24,16 +24,16 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 7 |
+| Array | 8 |
 | Hash Table | 5 |
 | Sorting | 4 |
 | Math | 2 |
+| Prefix Sum | 2 |
 | String | 2 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
 | Heap (Priority Queue) | 1 |
-| Prefix Sum | 1 |
 | Quickselect | 1 |
 
 ## 📚 Problems
@@ -48,11 +48,13 @@
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
 | 3876 | Construct Uniform Parity Array II | 🟡 Medium | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-ii/) | [C++](./solutions/3876.construct-uniform-parity-array-ii.cpp) |
+| 3903 | Smallest Stable Index I | 🟢 Easy | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-i/) | [C++](./solutions/3903.smallest-stable-index-i.cpp) |
 
 ## 🔥 Recent Solutions
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3903 | Smallest Stable Index I | 2026-09-05 |
 | 3876 | Construct Uniform Parity Array II | 2026-09-04 |
 | 238 | Product of Array Except Self | 2026-09-02 |
 | 3875 | Construct Uniform Parity Array I | 2026-09-02 |
