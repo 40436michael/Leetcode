@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 5 |
+| 🟢 Easy | 6 |
 | 🟡 Medium | 7 |
 | 🔴 Hard | 1 |
-| **Total** | **13** |
+| **Total** | **14** |
 
 ## 📌 需要複習
 
@@ -30,8 +30,8 @@
 | Array | 11 |
 | Hash Table | 7 |
 | Sorting | 4 |
+| String | 4 |
 | Prefix Sum | 3 |
-| String | 3 |
 | Math | 2 |
 | Bucket Sort | 1 |
 | Counting | 1 |
@@ -40,6 +40,7 @@
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
 | Quickselect | 1 |
+| Two Pointers | 1 |
 | Union-Find | 1 |
 
 ## 📚 Problems
@@ -50,6 +51,7 @@
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
+| 125 | Valid Palindrome | 🟢 Easy | - | 1 | Two Pointers, String | [🔗](https://leetcode.com/problems/valid-palindrome/) | [C++](./solutions/125.valid-palindrome.cpp) |
 | 128 | Longest Consecutive Sequence | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Union-Find | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
@@ -64,6 +66,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 125 | Valid Palindrome | 2026-09-07 |
 | 128 | Longest Consecutive Sequence | 2026-09-06 |
 | 115 | Distinct Subsequences | 2026-09-06 |
 | 36 | Valid Sudoku | 2026-09-06 |
@@ -73,5 +76,4 @@
 | 238 | Product of Array Except Self | 2026-09-02 |
 | 3875 | Construct Uniform Parity Array I | 2026-09-02 |
 | 347 | Top K Frequent Elements | 2026-09-02 |
-| 49 | Group Anagrams | 2026-09-01 |
 
