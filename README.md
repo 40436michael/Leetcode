@@ -9,7 +9,7 @@
 | 🟢 Easy | 6 |
 | 🟡 Medium | 9 |
 | 🔴 Hard | 1 |
-| **Total** | **16** |
+| **Total** | **17** |
 
 ## 📌 需要複習
 
@@ -17,6 +17,7 @@
 
 | 題號 | 題目名稱 | LeetCode | 解答 |
 | :---: | :--- | :---: | :---: |
+| 15 | 3 Sum | [🔗](https://leetcode.com/problems/3-sum/) | [C++](./solutions/15.3-sum.cpp) |
 | 36 | Valid Sudoku | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
@@ -51,6 +52,7 @@
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: | :---: |
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
 | 11 | Container With Most Water | 🟡 Medium | - | 1 | Array, Two Pointers, Greedy | [🔗](https://leetcode.com/problems/container-with-most-water/) | [C++](./solutions/11.container-with-most-water.cpp) |
+| 15 | 3 Sum | ⚪ Unknown | ⚠️ 不熟 | 1 | - | [🔗](https://leetcode.com/problems/3-sum/) | [C++](./solutions/15.3-sum.cpp) |
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
@@ -70,6 +72,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 15 | 3 Sum | 2026-09-07 |
 | 11 | Container With Most Water | 2026-09-07 |
 | 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
 | 125 | Valid Palindrome | 2026-09-07 |
@@ -79,5 +82,4 @@
 | 3904 | Smallest Stable Index II | 2026-09-05 |
 | 3903 | Smallest Stable Index I | 2026-09-05 |
 | 3876 | Construct Uniform Parity Array II | 2026-09-04 |
-| 238 | Product of Array Except Self | 2026-09-02 |
 
