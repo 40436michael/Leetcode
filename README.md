@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 6 |
-| 🟡 Medium | 8 |
+| 🟡 Medium | 9 |
 | 🔴 Hard | 1 |
-| **Total** | **15** |
+| **Total** | **16** |
 
 ## 📌 需要複習
 
@@ -27,18 +27,19 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 12 |
+| Array | 13 |
 | Hash Table | 7 |
 | Sorting | 4 |
 | String | 4 |
 | Prefix Sum | 3 |
+| Two Pointers | 3 |
 | Math | 2 |
-| Two Pointers | 2 |
 | Binary Search | 1 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
 | Dynamic Programming | 1 |
+| Greedy | 1 |
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
 | Quickselect | 1 |
@@ -49,6 +50,7 @@
 | 題號 | 題目名稱 | 難度 | 狀態 | 次數 | Tags | LeetCode | 解答 |
 | :---: | :--- | :---: | :---: | :---: | :--- | :---: | :---: |
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
+| 11 | Container With Most Water | 🟡 Medium | - | 1 | Array, Two Pointers, Greedy | [🔗](https://leetcode.com/problems/container-with-most-water/) | [C++](./solutions/11.container-with-most-water.cpp) |
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
@@ -68,6 +70,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 11 | Container With Most Water | 2026-09-07 |
 | 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
 | 125 | Valid Palindrome | 2026-09-07 |
 | 128 | Longest Consecutive Sequence | 2026-09-06 |
@@ -77,5 +80,4 @@
 | 3903 | Smallest Stable Index I | 2026-09-05 |
 | 3876 | Construct Uniform Parity Array II | 2026-09-04 |
 | 238 | Product of Array Except Self | 2026-09-02 |
-| 3875 | Construct Uniform Parity Array I | 2026-09-02 |
 
