@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 6 |
-| 🟡 Medium | 7 |
+| 🟡 Medium | 8 |
 | 🔴 Hard | 1 |
-| **Total** | **14** |
+| **Total** | **15** |
 
 ## 📌 需要複習
 
@@ -27,12 +27,14 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 11 |
+| Array | 12 |
 | Hash Table | 7 |
 | Sorting | 4 |
 | String | 4 |
 | Prefix Sum | 3 |
 | Math | 2 |
+| Two Pointers | 2 |
+| Binary Search | 1 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
@@ -40,7 +42,6 @@
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
 | Quickselect | 1 |
-| Two Pointers | 1 |
 | Union-Find | 1 |
 
 ## 📚 Problems
@@ -53,6 +54,7 @@
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 125 | Valid Palindrome | 🟢 Easy | - | 1 | Two Pointers, String | [🔗](https://leetcode.com/problems/valid-palindrome/) | [C++](./solutions/125.valid-palindrome.cpp) |
 | 128 | Longest Consecutive Sequence | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Union-Find | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
+| 167 | Two Sum II - Input Array Is Sorted | 🟡 Medium | - | 1 | Array, Two Pointers, Binary Search | [🔗](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./solutions/167.two-sum-ii-input-array-is-sorted.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
@@ -66,6 +68,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
 | 125 | Valid Palindrome | 2026-09-07 |
 | 128 | Longest Consecutive Sequence | 2026-09-06 |
 | 115 | Distinct Subsequences | 2026-09-06 |
@@ -75,5 +78,4 @@
 | 3876 | Construct Uniform Parity Array II | 2026-09-04 |
 | 238 | Product of Array Except Self | 2026-09-02 |
 | 3875 | Construct Uniform Parity Array I | 2026-09-02 |
-| 347 | Top K Frequent Elements | 2026-09-02 |
 
