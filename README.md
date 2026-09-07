@@ -8,8 +8,8 @@
 | :---: | ---: |
 | 🟢 Easy | 6 |
 | 🟡 Medium | 9 |
-| 🔴 Hard | 1 |
-| **Total** | **17** |
+| 🔴 Hard | 2 |
+| **Total** | **18** |
 
 ## 📌 需要複習
 
@@ -23,6 +23,7 @@
 | 115 | Distinct Subsequences | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 128 | Longest Consecutive Sequence | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
 | 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
+| 940 | Distinct Subsequences II | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 
 ## 🏷️ Tags 統計
 
@@ -30,16 +31,16 @@
 | :--- | ---: |
 | Array | 13 |
 | Hash Table | 7 |
+| String | 5 |
 | Sorting | 4 |
-| String | 4 |
 | Prefix Sum | 3 |
 | Two Pointers | 3 |
+| Dynamic Programming | 2 |
 | Math | 2 |
 | Binary Search | 1 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
-| Dynamic Programming | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
@@ -63,6 +64,7 @@
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
+| 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
 | 3876 | Construct Uniform Parity Array II | 🟡 Medium | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-ii/) | [C++](./solutions/3876.construct-uniform-parity-array-ii.cpp) |
 | 3903 | Smallest Stable Index I | 🟢 Easy | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-i/) | [C++](./solutions/3903.smallest-stable-index-i.cpp) |
@@ -72,6 +74,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 940 | Distinct Subsequences II | 2026-09-07 |
 | 15 | 3 Sum | 2026-09-07 |
 | 11 | Container With Most Water | 2026-09-07 |
 | 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
@@ -81,5 +84,4 @@
 | 36 | Valid Sudoku | 2026-09-06 |
 | 3904 | Smallest Stable Index II | 2026-09-05 |
 | 3903 | Smallest Stable Index I | 2026-09-05 |
-| 3876 | Construct Uniform Parity Array II | 2026-09-04 |
 
