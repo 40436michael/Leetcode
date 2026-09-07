@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 6 |
+| 🟢 Easy | 7 |
 | 🟡 Medium | 9 |
 | 🔴 Hard | 3 |
-| **Total** | **19** |
+| **Total** | **20** |
 
 ## 📌 需要複習
 
@@ -32,13 +32,15 @@
 | :--- | ---: |
 | Array | 14 |
 | Hash Table | 7 |
-| String | 5 |
+| String | 6 |
 | Sorting | 4 |
 | Two Pointers | 4 |
 | Dynamic Programming | 3 |
 | Prefix Sum | 3 |
 | Math | 2 |
+| Stack | 2 |
 | Binary Search | 1 |
+| Bracket Sequences | 1 |
 | Bucket Sort | 1 |
 | Counting | 1 |
 | Divide and Conquer | 1 |
@@ -47,7 +49,6 @@
 | Matrix | 1 |
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
-| Stack | 1 |
 | Union-Find | 1 |
 
 ## 📚 Problems
@@ -57,6 +58,7 @@
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
 | 11 | Container With Most Water | 🟡 Medium | - | 1 | Array, Two Pointers, Greedy | [🔗](https://leetcode.com/problems/container-with-most-water/) | [C++](./solutions/11.container-with-most-water.cpp) |
 | 15 | 3 Sum | ⚪ Unknown | ⚠️ 不熟 | 1 | - | [🔗](https://leetcode.com/problems/3-sum/) | [C++](./solutions/15.3-sum.cpp) |
+| 20 | Valid Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/valid-parentheses/) | [C++](./solutions/20.valid-parentheses.cpp) |
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 42 | Trapping Rain Water | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack | [🔗](https://leetcode.com/problems/trapping-rain-water/) | [C++](./solutions/42.trapping-rain-water.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
@@ -78,6 +80,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 20 | Valid Parentheses | 2026-09-08 |
 | 42 | Trapping Rain Water | 2026-09-08 |
 | 940 | Distinct Subsequences II | 2026-09-07 |
 | 15 | 3 Sum | 2026-09-07 |
@@ -87,5 +90,4 @@
 | 128 | Longest Consecutive Sequence | 2026-09-06 |
 | 115 | Distinct Subsequences | 2026-09-06 |
 | 36 | Valid Sudoku | 2026-09-06 |
-| 3904 | Smallest Stable Index II | 2026-09-05 |
 
