@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 7 |
+| 🟢 Easy | 8 |
 | 🟡 Medium | 9 |
 | 🔴 Hard | 3 |
-| **Total** | **20** |
+| **Total** | **21** |
 
 ## 📌 需要複習
 
@@ -36,8 +36,8 @@
 | Sorting | 4 |
 | Two Pointers | 4 |
 | Dynamic Programming | 3 |
+| Math | 3 |
 | Prefix Sum | 3 |
-| Math | 2 |
 | Stack | 2 |
 | Binary Search | 1 |
 | Bracket Sequences | 1 |
@@ -71,6 +71,7 @@
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
 | 3876 | Construct Uniform Parity Array II | 🟡 Medium | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-ii/) | [C++](./solutions/3876.construct-uniform-parity-array-ii.cpp) |
 | 3903 | Smallest Stable Index I | 🟢 Easy | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-i/) | [C++](./solutions/3903.smallest-stable-index-i.cpp) |
@@ -80,6 +81,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3870 | Count Commas in Range | 2026-09-08 |
 | 20 | Valid Parentheses | 2026-09-08 |
 | 42 | Trapping Rain Water | 2026-09-08 |
 | 940 | Distinct Subsequences II | 2026-09-07 |
@@ -89,5 +91,4 @@
 | 125 | Valid Palindrome | 2026-09-07 |
 | 128 | Longest Consecutive Sequence | 2026-09-06 |
 | 115 | Distinct Subsequences | 2026-09-06 |
-| 36 | Valid Sudoku | 2026-09-06 |
 
