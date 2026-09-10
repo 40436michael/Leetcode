@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 8 |
-| 🟡 Medium | 10 |
+| 🟡 Medium | 11 |
 | 🔴 Hard | 3 |
-| **Total** | **22** |
+| **Total** | **23** |
 
 ## 📌 需要複習
 
@@ -25,6 +25,7 @@
 | 128 | Longest Consecutive Sequence | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
 | 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 940 | Distinct Subsequences II | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 2265 | Count Nodes Equal to Average of Subtree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3871 | Count Commas in Range II | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 
 ## 🏷️ Tags 統計
@@ -41,15 +42,18 @@
 | Prefix Sum | 3 |
 | Stack | 2 |
 | Binary Search | 1 |
+| Binary Tree | 1 |
 | Bracket Sequences | 1 |
 | Bucket Sort | 1 |
 | Counting | 1 |
+| Depth-First Search | 1 |
 | Divide and Conquer | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
+| Tree | 1 |
 | Union-Find | 1 |
 
 ## 📚 Problems
@@ -72,6 +76,7 @@
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -83,6 +88,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
 | 3871 | Count Commas in Range II | 2026-09-08 |
 | 3870 | Count Commas in Range | 2026-09-08 |
 | 20 | Valid Parentheses | 2026-09-08 |
@@ -92,5 +98,4 @@
 | 11 | Container With Most Water | 2026-09-07 |
 | 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
 | 125 | Valid Palindrome | 2026-09-07 |
-| 128 | Longest Consecutive Sequence | 2026-09-06 |
 
