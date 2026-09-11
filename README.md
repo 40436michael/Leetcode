@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 8 |
+| 🟢 Easy | 9 |
 | 🟡 Medium | 11 |
 | 🔴 Hard | 3 |
-| **Total** | **23** |
+| **Total** | **24** |
 
 ## 📌 需要複習
 
@@ -32,8 +32,8 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 14 |
-| Hash Table | 7 |
+| Array | 15 |
+| Hash Table | 8 |
 | String | 6 |
 | Math | 4 |
 | Sorting | 4 |
@@ -48,11 +48,13 @@
 | Counting | 1 |
 | Depth-First Search | 1 |
 | Divide and Conquer | 1 |
+| Enumeration | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
 | Matrix | 1 |
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
+| Recursion | 1 |
 | Tree | 1 |
 | Union-Find | 1 |
 
@@ -77,6 +79,7 @@
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
+| 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -88,6 +91,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
 | 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
 | 3871 | Count Commas in Range II | 2026-09-08 |
 | 3870 | Count Commas in Range | 2026-09-08 |
@@ -97,5 +101,4 @@
 | 15 | 3 Sum | 2026-09-07 |
 | 11 | Container With Most Water | 2026-09-07 |
 | 167 | Two Sum II - Input Array Is Sorted | 2026-09-07 |
-| 125 | Valid Palindrome | 2026-09-07 |
 
