@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 9 |
-| 🟡 Medium | 11 |
+| 🟡 Medium | 12 |
 | 🔴 Hard | 4 |
-| **Total** | **25** |
+| **Total** | **26** |
 
 ## 📌 需要複習
 
@@ -24,6 +24,7 @@
 | 115 | Distinct Subsequences | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 128 | Longest Consecutive Sequence | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
 | 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
+| 835 | Image Overlap | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 940 | Distinct Subsequences II | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
@@ -33,7 +34,7 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 16 |
+| Array | 17 |
 | Hash Table | 8 |
 | String | 6 |
 | Sorting | 5 |
@@ -42,6 +43,7 @@
 | Two Pointers | 4 |
 | Prefix Sum | 3 |
 | Binary Search | 2 |
+| Matrix | 2 |
 | Stack | 2 |
 | Binary Tree | 1 |
 | Bracket Sequences | 1 |
@@ -52,7 +54,6 @@
 | Enumeration | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
-| Matrix | 1 |
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
 | Recursion | 1 |
@@ -78,6 +79,7 @@
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
 | 242 | Valid Anagram | 🟢 Easy | - | 2 | Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/valid-anagram/) | [C++](./solutions/242.valid-anagram.cpp) |
 | 347 | Top K Frequent Elements | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
+| 835 | Image Overlap | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Matrix | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
@@ -93,6 +95,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 835 | Image Overlap | 2026-09-14 |
 | 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
 | 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
 | 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
@@ -102,5 +105,4 @@
 | 42 | Trapping Rain Water | 2026-09-08 |
 | 940 | Distinct Subsequences II | 2026-09-07 |
 | 15 | 3 Sum | 2026-09-07 |
-| 11 | Container With Most Water | 2026-09-07 |
 
