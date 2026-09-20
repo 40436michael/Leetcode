@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 10 |
-| 🟡 Medium | 12 |
+| 🟡 Medium | 13 |
 | 🔴 Hard | 4 |
-| **Total** | **27** |
+| **Total** | **28** |
 
 ## 📌 需要複習
 
@@ -27,6 +27,7 @@
 | 835 | Image Overlap | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
 | 940 | Distinct Subsequences II | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 1621 | Number of Sets of K Non-Overlapping Line Segments | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3871 | Count Commas in Range II | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
@@ -37,18 +38,19 @@
 | :--- | ---: |
 | Array | 17 |
 | Hash Table | 8 |
+| Math | 6 |
 | String | 6 |
-| Math | 5 |
+| Dynamic Programming | 5 |
 | Sorting | 5 |
-| Dynamic Programming | 4 |
+| Prefix Sum | 4 |
 | Two Pointers | 4 |
-| Prefix Sum | 3 |
 | Binary Search | 2 |
 | Matrix | 2 |
 | Stack | 2 |
 | Binary Tree | 1 |
 | Bracket Sequences | 1 |
 | Bucket Sort | 1 |
+| Combinatorics | 1 |
 | Counting | 1 |
 | Depth-First Search | 1 |
 | Divide and Conquer | 1 |
@@ -84,6 +86,7 @@
 | 835 | Image Overlap | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Matrix | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | 🟢 Easy | ⚠️ 不熟 | 1 | Math, Geometry | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
@@ -98,6 +101,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
 | 836 | Rectangle Overlap | 2026-09-14 |
 | 835 | Image Overlap | 2026-09-14 |
 | 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
@@ -107,5 +111,4 @@
 | 3870 | Count Commas in Range | 2026-09-08 |
 | 20 | Valid Parentheses | 2026-09-08 |
 | 42 | Trapping Rain Water | 2026-09-08 |
-| 940 | Distinct Subsequences II | 2026-09-07 |
 
