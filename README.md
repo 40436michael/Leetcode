@@ -7,9 +7,9 @@
 | 難度 | 題數 |
 | :---: | ---: |
 | 🟢 Easy | 11 |
-| 🟡 Medium | 13 |
+| 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **29** |
+| **Total** | **30** |
 
 ## 📌 需要複習
 
@@ -23,6 +23,7 @@
 | 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 128 | Longest Consecutive Sequence | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
+| 155 | Min Stack | [🔗](https://leetcode.com/problems/min-stack/) | [C++](./solutions/155.min-stack.cpp) |
 | 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 835 | Image Overlap | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
@@ -44,15 +45,16 @@
 | Sorting | 5 |
 | Prefix Sum | 4 |
 | Two Pointers | 4 |
+| Stack | 3 |
 | Binary Search | 2 |
 | Matrix | 2 |
-| Stack | 2 |
 | Binary Tree | 1 |
 | Bracket Sequences | 1 |
 | Bucket Sort | 1 |
 | Combinatorics | 1 |
 | Counting | 1 |
 | Depth-First Search | 1 |
+| Design | 1 |
 | Divide and Conquer | 1 |
 | Enumeration | 1 |
 | Geometry | 1 |
@@ -79,6 +81,7 @@
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 125 | Valid Palindrome | 🟢 Easy | - | 1 | Two Pointers, String | [🔗](https://leetcode.com/problems/valid-palindrome/) | [C++](./solutions/125.valid-palindrome.cpp) |
 | 128 | Longest Consecutive Sequence | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Union-Find | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
+| 155 | Min Stack | 🟡 Medium | ⚠️ 不熟 | 1 | Stack, Design | [🔗](https://leetcode.com/problems/min-stack/) | [C++](./solutions/155.min-stack.cpp) |
 | 167 | Two Sum II - Input Array Is Sorted | 🟡 Medium | - | 1 | Array, Two Pointers, Binary Search | [🔗](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./solutions/167.two-sum-ii-input-array-is-sorted.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
@@ -103,6 +106,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 155 | Min Stack | 2026-09-23 |
 | 3498 | Reverse Degree of a String | 2026-09-21 |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
 | 836 | Rectangle Overlap | 2026-09-14 |
@@ -112,5 +116,4 @@
 | 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
 | 3871 | Count Commas in Range II | 2026-09-08 |
 | 3870 | Count Commas in Range | 2026-09-08 |
-| 20 | Valid Parentheses | 2026-09-08 |
 
