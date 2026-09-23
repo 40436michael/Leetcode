@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 10 |
+| 🟢 Easy | 11 |
 | 🟡 Medium | 13 |
 | 🔴 Hard | 4 |
-| **Total** | **28** |
+| **Total** | **29** |
 
 ## 📌 需要複習
 
@@ -38,8 +38,8 @@
 | :--- | ---: |
 | Array | 17 |
 | Hash Table | 8 |
+| String | 7 |
 | Math | 6 |
-| String | 6 |
 | Dynamic Programming | 5 |
 | Sorting | 5 |
 | Prefix Sum | 4 |
@@ -61,6 +61,7 @@
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
 | Recursion | 1 |
+| Simulation | 1 |
 | Tree | 1 |
 | Union-Find | 1 |
 
@@ -90,6 +91,7 @@
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
+| 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -101,6 +103,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3498 | Reverse Degree of a String | 2026-09-21 |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
 | 836 | Rectangle Overlap | 2026-09-14 |
 | 835 | Image Overlap | 2026-09-14 |
@@ -110,5 +113,4 @@
 | 3871 | Count Commas in Range II | 2026-09-08 |
 | 3870 | Count Commas in Range | 2026-09-08 |
 | 20 | Valid Parentheses | 2026-09-08 |
-| 42 | Trapping Rain Water | 2026-09-08 |
 
