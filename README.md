@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 11 |
+| 🟢 Easy | 12 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **30** |
+| **Total** | **31** |
 
 ## 📌 需要複習
 
@@ -37,10 +37,10 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 17 |
+| Array | 18 |
 | Hash Table | 8 |
+| Math | 7 |
 | String | 7 |
-| Math | 6 |
 | Dynamic Programming | 5 |
 | Sorting | 5 |
 | Prefix Sum | 4 |
@@ -95,6 +95,7 @@
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
+| 3550 | Smallest Index With Digit Sum Equal to Index | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/) | [C++](./solutions/3550.smallest-index-with-digit-sum-equal-to-index.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -106,6 +107,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
 | 155 | Min Stack | 2026-09-23 |
 | 3498 | Reverse Degree of a String | 2026-09-21 |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
@@ -115,5 +117,4 @@
 | 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
 | 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
 | 3871 | Count Commas in Range II | 2026-09-08 |
-| 3870 | Count Commas in Range | 2026-09-08 |
 
