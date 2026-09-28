@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 12 |
+| 🟢 Easy | 13 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **31** |
+| **Total** | **32** |
 
 ## 📌 需要複習
 
@@ -39,17 +39,17 @@
 | :--- | ---: |
 | Array | 18 |
 | Hash Table | 8 |
+| String | 8 |
 | Math | 7 |
-| String | 7 |
 | Dynamic Programming | 5 |
 | Sorting | 5 |
 | Prefix Sum | 4 |
+| Stack | 4 |
 | Two Pointers | 4 |
-| Stack | 3 |
 | Binary Search | 2 |
+| Bracket Sequences | 2 |
 | Matrix | 2 |
 | Binary Tree | 1 |
-| Bracket Sequences | 1 |
 | Bucket Sort | 1 |
 | Combinatorics | 1 |
 | Counting | 1 |
@@ -90,6 +90,7 @@
 | 835 | Image Overlap | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Matrix | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | 🟢 Easy | ⚠️ 不熟 | 1 | Math, Geometry | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
@@ -107,6 +108,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
 | 155 | Min Stack | 2026-09-23 |
 | 3498 | Reverse Degree of a String | 2026-09-21 |
@@ -116,5 +118,4 @@
 | 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
 | 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
 | 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
-| 3871 | Count Commas in Range II | 2026-09-08 |
 
