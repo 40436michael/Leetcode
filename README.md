@@ -74,7 +74,7 @@
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
 | 11 | Container With Most Water | 🟡 Medium | - | 1 | Array, Two Pointers, Greedy | [🔗](https://leetcode.com/problems/container-with-most-water/) | [C++](./solutions/11.container-with-most-water.cpp) |
 | 15 | 3 Sum | ⚪ Unknown | ⚠️ 不熟 | 1 | - | [🔗](https://leetcode.com/problems/3-sum/) | [C++](./solutions/15.3-sum.cpp) |
-| 20 | Valid Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/valid-parentheses/) | [C++](./solutions/20.valid-parentheses.cpp) |
+| 20 | Valid Parentheses | 🟢 Easy | - | 2 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/valid-parentheses/) | [C++](./solutions/20.valid-parentheses.cpp) |
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 42 | Trapping Rain Water | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack | [🔗](https://leetcode.com/problems/trapping-rain-water/) | [C++](./solutions/42.trapping-rain-water.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
@@ -108,6 +108,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 20 | Valid Parentheses | 2026-10-01 |
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
 | 155 | Min Stack | 2026-09-23 |
@@ -117,5 +118,4 @@
 | 835 | Image Overlap | 2026-09-14 |
 | 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
 | 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
-| 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
 
