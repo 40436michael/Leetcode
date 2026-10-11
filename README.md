@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 14 |
+| 🟢 Easy | 15 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **33** |
+| **Total** | **34** |
 
 ## 📌 需要複習
 
@@ -37,7 +37,7 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 18 |
+| Array | 19 |
 | String | 9 |
 | Hash Table | 8 |
 | Math | 7 |
@@ -48,6 +48,7 @@
 | Two Pointers | 4 |
 | Bracket Sequences | 3 |
 | Binary Search | 2 |
+| Enumeration | 2 |
 | Matrix | 2 |
 | Binary Tree | 1 |
 | Bucket Sort | 1 |
@@ -56,7 +57,6 @@
 | Depth-First Search | 1 |
 | Design | 1 |
 | Divide and Conquer | 1 |
-| Enumeration | 1 |
 | Geometry | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
@@ -94,6 +94,7 @@
 | 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
+| 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
@@ -109,6 +110,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 2778 | Sum of Squares of Special Elements  | 2026-10-11 |
 | 1021 | Remove Outermost Parentheses | 2026-10-09 |
 | 20 | Valid Parentheses | 2026-10-01 |
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
@@ -118,5 +120,4 @@
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
 | 836 | Rectangle Overlap | 2026-09-14 |
 | 835 | Image Overlap | 2026-09-14 |
-| 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
 
