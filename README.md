@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 16 |
+| 🟢 Easy | 17 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **35** |
+| **Total** | **36** |
 
 ## 📌 需要複習
 
@@ -37,17 +37,17 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 20 |
+| Array | 21 |
 | Hash Table | 9 |
 | String | 9 |
 | Math | 7 |
+| Sorting | 6 |
 | Dynamic Programming | 5 |
-| Sorting | 5 |
 | Stack | 5 |
 | Prefix Sum | 4 |
 | Two Pointers | 4 |
+| Binary Search | 3 |
 | Bracket Sequences | 3 |
-| Binary Search | 2 |
 | Enumeration | 2 |
 | Matrix | 2 |
 | Binary Indexed Tree | 1 |
@@ -95,6 +95,7 @@
 | 1021 | Remove Outermost Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/remove-outermost-parentheses/) | [C++](./solutions/1021.remove-outermost-parentheses.cpp) |
 | 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
+| 2089 | Find Target Indices After Sorting Array | 🟢 Easy | - | 1 | Array, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | [C++](./solutions/2089.find-target-indices-after-sorting-array.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 🟢 Easy | - | 1 | Array, Hash Table, Binary Indexed Tree, Segment Tree | [🔗](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | [C++](./solutions/2913.subarrays-distinct-element-sum-of-squares-i.cpp) |
@@ -113,6 +114,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 2026-10-15 |
 | 2778 | Sum of Squares of Special Elements  | 2026-10-11 |
 | 1021 | Remove Outermost Parentheses | 2026-10-09 |
@@ -122,5 +124,4 @@
 | 155 | Min Stack | 2026-09-23 |
 | 3498 | Reverse Degree of a String | 2026-09-21 |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
-| 836 | Rectangle Overlap | 2026-09-14 |
 
