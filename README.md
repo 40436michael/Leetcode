@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 11 |
-| 🟡 Medium | 13 |
+| 🟢 Easy | 17 |
+| 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **29** |
+| **Total** | **36** |
 
 ## 📌 需要複習
 
@@ -23,6 +23,7 @@
 | 49 | Group Anagrams | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 128 | Longest Consecutive Sequence | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
+| 155 | Min Stack | [🔗](https://leetcode.com/problems/min-stack/) | [C++](./solutions/155.min-stack.cpp) |
 | 347 | Top K Frequent Elements | [🔗](https://leetcode.com/problems/top-k-frequent-elements/) | [C++](./solutions/347.top-k-frequent-elements.cpp) |
 | 835 | Image Overlap | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
@@ -36,31 +37,34 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 17 |
-| Hash Table | 8 |
-| String | 7 |
-| Math | 6 |
+| Array | 21 |
+| Hash Table | 9 |
+| String | 9 |
+| Math | 7 |
+| Sorting | 6 |
 | Dynamic Programming | 5 |
-| Sorting | 5 |
+| Stack | 5 |
 | Prefix Sum | 4 |
 | Two Pointers | 4 |
-| Binary Search | 2 |
+| Binary Search | 3 |
+| Bracket Sequences | 3 |
+| Enumeration | 2 |
 | Matrix | 2 |
-| Stack | 2 |
+| Binary Indexed Tree | 1 |
 | Binary Tree | 1 |
-| Bracket Sequences | 1 |
 | Bucket Sort | 1 |
 | Combinatorics | 1 |
 | Counting | 1 |
 | Depth-First Search | 1 |
+| Design | 1 |
 | Divide and Conquer | 1 |
-| Enumeration | 1 |
 | Geometry | 1 |
 | Greedy | 1 |
 | Heap (Priority Queue) | 1 |
 | Monotonic Stack | 1 |
 | Quickselect | 1 |
 | Recursion | 1 |
+| Segment Tree | 1 |
 | Simulation | 1 |
 | Tree | 1 |
 | Union-Find | 1 |
@@ -72,13 +76,14 @@
 | 1 | Two Sum | 🟢 Easy | - | 2 | Array, Hash Table | [🔗](https://leetcode.com/problems/two-sum/) | [C++](./solutions/1.two-sum.cpp) |
 | 11 | Container With Most Water | 🟡 Medium | - | 1 | Array, Two Pointers, Greedy | [🔗](https://leetcode.com/problems/container-with-most-water/) | [C++](./solutions/11.container-with-most-water.cpp) |
 | 15 | 3 Sum | ⚪ Unknown | ⚠️ 不熟 | 1 | - | [🔗](https://leetcode.com/problems/3-sum/) | [C++](./solutions/15.3-sum.cpp) |
-| 20 | Valid Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/valid-parentheses/) | [C++](./solutions/20.valid-parentheses.cpp) |
+| 20 | Valid Parentheses | 🟢 Easy | - | 2 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/valid-parentheses/) | [C++](./solutions/20.valid-parentheses.cpp) |
 | 36 | Valid Sudoku | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Matrix | [🔗](https://leetcode.com/problems/valid-sudoku/) | [C++](./solutions/36.valid-sudoku.cpp) |
 | 42 | Trapping Rain Water | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack | [🔗](https://leetcode.com/problems/trapping-rain-water/) | [C++](./solutions/42.trapping-rain-water.cpp) |
 | 49 | Group Anagrams | 🟡 Medium | ⚠️ 不熟 | 4 | Array, Hash Table, String, Sorting | [🔗](https://leetcode.com/problems/group-anagrams/) | [C++](./solutions/49.group-anagrams.cpp) |
 | 115 | Distinct Subsequences | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences/) | [C++](./solutions/115.distinct-subsequences.cpp) |
 | 125 | Valid Palindrome | 🟢 Easy | - | 1 | Two Pointers, String | [🔗](https://leetcode.com/problems/valid-palindrome/) | [C++](./solutions/125.valid-palindrome.cpp) |
 | 128 | Longest Consecutive Sequence | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Hash Table, Union-Find | [🔗](https://leetcode.com/problems/longest-consecutive-sequence/) | [C++](./solutions/128.longest-consecutive-sequence.cpp) |
+| 155 | Min Stack | 🟡 Medium | ⚠️ 不熟 | 1 | Stack, Design | [🔗](https://leetcode.com/problems/min-stack/) | [C++](./solutions/155.min-stack.cpp) |
 | 167 | Two Sum II - Input Array Is Sorted | 🟡 Medium | - | 1 | Array, Two Pointers, Binary Search | [🔗](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [C++](./solutions/167.two-sum-ii-input-array-is-sorted.cpp) |
 | 217 | Contains Duplicate | 🟢 Easy | - | 2 | Array, Hash Table, Sorting | [🔗](https://leetcode.com/problems/contains-duplicate/) | [C++](./solutions/217.contains-duplicate.cpp) |
 | 238 | Product of Array Except Self | 🟡 Medium | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/product-of-array-except-self/) | [C++](./solutions/238.product-of-array-except-self.cpp) |
@@ -87,11 +92,17 @@
 | 835 | Image Overlap | 🟡 Medium | ⚠️ 不熟 | 1 | Array, Matrix | [🔗](https://leetcode.com/problems/image-overlap/) | [C++](./solutions/835.image-overlap.cpp) |
 | 836 | Rectangle Overlap | 🟢 Easy | ⚠️ 不熟 | 1 | Math, Geometry | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
+| 1021 | Remove Outermost Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/remove-outermost-parentheses/) | [C++](./solutions/1021.remove-outermost-parentheses.cpp) |
+| 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
+| 2089 | Find Target Indices After Sorting Array | 🟢 Easy | - | 1 | Array, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | [C++](./solutions/2089.find-target-indices-after-sorting-array.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
+| 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
+| 2913 | Subarrays Distinct Element Sum of Squares I | 🟢 Easy | - | 1 | Array, Hash Table, Binary Indexed Tree, Segment Tree | [🔗](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | [C++](./solutions/2913.subarrays-distinct-element-sum-of-squares-i.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
+| 3550 | Smallest Index With Digit Sum Equal to Index | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/) | [C++](./solutions/3550.smallest-index-with-digit-sum-equal-to-index.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -103,14 +114,14 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
+| 2913 | Subarrays Distinct Element Sum of Squares I | 2026-10-15 |
+| 2778 | Sum of Squares of Special Elements  | 2026-10-11 |
+| 1021 | Remove Outermost Parentheses | 2026-10-09 |
+| 20 | Valid Parentheses | 2026-10-01 |
+| 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
+| 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
+| 155 | Min Stack | 2026-09-23 |
 | 3498 | Reverse Degree of a String | 2026-09-21 |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
-| 836 | Rectangle Overlap | 2026-09-14 |
-| 835 | Image Overlap | 2026-09-14 |
-| 3414 | Maximum Score of Non-overlapping Intervals | 2026-09-12 |
-| 3483 | Unique 3-Digit Even Numbers | 2026-09-11 |
-| 2265 | Count Nodes Equal to Average of Subtree | 2026-09-10 |
-| 3871 | Count Commas in Range II | 2026-09-08 |
-| 3870 | Count Commas in Range | 2026-09-08 |
-| 20 | Valid Parentheses | 2026-09-08 |
 

@@ -8,25 +8,22 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char> stk;
+        stack<char> st;
         for(auto i:s){
-            char prefix=stk.top();
-            if(stk.empty()){
-                stk.push(i);
+            char ch=st.top();
+            if(st.empty()){
+                st.push(i);
             }            
-            else if(prefix=='('&&i==')')
-                stk.pop();
-            else if(prefix=='['&&i==']')
-                stk.pop();
-            else if(prefix=='{'&&i=='}')
-                stk.pop();
+            else if(ch=='('&&i==')')
+                st.pop();
+            else if(ch=='['&&i==']')
+                st.pop();
+            else if(ch=='{'&&i=='}')
+                st.pop();
             else 
-                stk.push(i);
+                st.push(i);
         }
-        if(stk.empty())
-            return true;
-        else
-            return false;
+        return st.empty();
     }
 };
 // @lc code=end
