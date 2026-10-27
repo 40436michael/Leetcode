@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 18 |
+| 🟢 Easy | 19 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **37** |
+| **Total** | **38** |
 
 ## 📌 需要複習
 
@@ -110,11 +110,13 @@
 | 3876 | Construct Uniform Parity Array II | 🟡 Medium | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-ii/) | [C++](./solutions/3876.construct-uniform-parity-array-ii.cpp) |
 | 3903 | Smallest Stable Index I | 🟢 Easy | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-i/) | [C++](./solutions/3903.smallest-stable-index-i.cpp) |
 | 3904 | Smallest Stable Index II | 🟡 Medium | - | 2 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-ii/) | [C++](./solutions/3904.smallest-stable-index-ii.cpp) |
+| 3963 | Create Grid With Exactly One Path | 🟢 Easy | - | 1 | - | [🔗](https://leetcode.com/problems/create-grid-with-exactly-one-path/) | [C++](./solutions/3963.create-grid-with-exactly-one-path.cpp) |
 
 ## 🔥 Recent Solutions
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3963 | Create Grid With Exactly One Path | 2026-10-27 |
 | 2409 | Count Days Spent Together | 2026-10-24 |
 | 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 2026-10-15 |
@@ -124,5 +126,4 @@
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
 | 155 | Min Stack | 2026-09-23 |
-| 3498 | Reverse Degree of a String | 2026-09-21 |
 
