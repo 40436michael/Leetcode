@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 19 |
+| 🟢 Easy | 20 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **38** |
+| **Total** | **39** |
 
 ## 📌 需要複習
 
@@ -37,10 +37,10 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 21 |
+| Array | 22 |
 | String | 10 |
 | Hash Table | 9 |
-| Math | 8 |
+| Math | 9 |
 | Sorting | 6 |
 | Dynamic Programming | 5 |
 | Stack | 5 |
@@ -104,6 +104,7 @@
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/) | [C++](./solutions/3550.smallest-index-with-digit-sum-equal-to-index.cpp) |
+| 3736 | Minimum Moves to Equal Array Elements III | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) | [C++](./solutions/3736.minimum-moves-to-equal-array-elements-iii.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
@@ -116,6 +117,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3736 | Minimum Moves to Equal Array Elements III | 2026-11-03 |
 | 3963 | Create Grid With Exactly One Path | 2026-10-27 |
 | 2409 | Count Days Spent Together | 2026-10-24 |
 | 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
@@ -125,5 +127,4 @@
 | 20 | Valid Parentheses | 2026-10-01 |
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
-| 155 | Min Stack | 2026-09-23 |
 
