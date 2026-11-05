@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 20 |
+| 🟢 Easy | 21 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **39** |
+| **Total** | **40** |
 
 ## 📌 需要複習
 
@@ -37,16 +37,16 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 22 |
+| Array | 23 |
 | String | 10 |
 | Hash Table | 9 |
 | Math | 9 |
-| Sorting | 6 |
+| Sorting | 7 |
 | Dynamic Programming | 5 |
 | Stack | 5 |
+| Two Pointers | 5 |
+| Binary Search | 4 |
 | Prefix Sum | 4 |
-| Two Pointers | 4 |
-| Binary Search | 3 |
 | Bracket Sequences | 3 |
 | Enumeration | 2 |
 | Matrix | 2 |
@@ -93,6 +93,7 @@
 | 836 | Rectangle Overlap | 🟢 Easy | ⚠️ 不熟 | 1 | Math, Geometry | [🔗](https://leetcode.com/problems/rectangle-overlap/) | [C++](./solutions/836.rectangle-overlap.cpp) |
 | 940 | Distinct Subsequences II | 🔴 Hard | ⚠️ 不熟 | 1 | String, Dynamic Programming | [🔗](https://leetcode.com/problems/distinct-subsequences-ii/) | [C++](./solutions/940.distinct-subsequences-ii.cpp) |
 | 1021 | Remove Outermost Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/remove-outermost-parentheses/) | [C++](./solutions/1021.remove-outermost-parentheses.cpp) |
+| 1385 | Find the Distance Value Between Two Arrays | 🟢 Easy | - | 1 | Array, Two Pointers, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) | [C++](./solutions/1385.find-the-distance-value-between-two-arrays.cpp) |
 | 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2089 | Find Target Indices After Sorting Array | 🟢 Easy | - | 1 | Array, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | [C++](./solutions/2089.find-target-indices-after-sorting-array.cpp) |
@@ -117,6 +118,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 1385 | Find the Distance Value Between Two Arrays | 2026-11-06 |
 | 3736 | Minimum Moves to Equal Array Elements III | 2026-11-03 |
 | 3963 | Create Grid With Exactly One Path | 2026-10-27 |
 | 2409 | Count Days Spent Together | 2026-10-24 |
@@ -126,5 +128,4 @@
 | 1021 | Remove Outermost Parentheses | 2026-10-09 |
 | 20 | Valid Parentheses | 2026-10-01 |
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
-| 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
 
