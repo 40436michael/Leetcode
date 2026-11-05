@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 17 |
+| 🟢 Easy | 20 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **36** |
+| **Total** | **39** |
 
 ## 📌 需要複習
 
@@ -37,10 +37,10 @@
 
 | Tag | 題數 |
 | :--- | ---: |
-| Array | 21 |
+| Array | 22 |
+| String | 10 |
 | Hash Table | 9 |
-| String | 9 |
-| Math | 7 |
+| Math | 9 |
 | Sorting | 6 |
 | Dynamic Programming | 5 |
 | Stack | 5 |
@@ -97,23 +97,29 @@
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2089 | Find Target Indices After Sorting Array | 🟢 Easy | - | 1 | Array, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | [C++](./solutions/2089.find-target-indices-after-sorting-array.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
+| 2409 | Count Days Spent Together | 🟢 Easy | - | 1 | Math, String | [🔗](https://leetcode.com/problems/count-days-spent-together/) | [C++](./solutions/2409.count-days-spent-together.cpp) |
 | 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 🟢 Easy | - | 1 | Array, Hash Table, Binary Indexed Tree, Segment Tree | [🔗](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | [C++](./solutions/2913.subarrays-distinct-element-sum-of-squares-i.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/) | [C++](./solutions/3550.smallest-index-with-digit-sum-equal-to-index.cpp) |
+| 3736 | Minimum Moves to Equal Array Elements III | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) | [C++](./solutions/3736.minimum-moves-to-equal-array-elements-iii.cpp) |
 | 3870 | Count Commas in Range | 🟢 Easy | - | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range/) | [C++](./solutions/3870.count-commas-in-range.cpp) |
 | 3871 | Count Commas in Range II | 🟡 Medium | ⚠️ 不熟 | 1 | Math | [🔗](https://leetcode.com/problems/count-commas-in-range-ii/) | [C++](./solutions/3871.count-commas-in-range-ii.cpp) |
 | 3875 | Construct Uniform Parity Array I | 🟢 Easy | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-i/) | [C++](./solutions/3875.construct-uniform-parity-array-i.cpp) |
 | 3876 | Construct Uniform Parity Array II | 🟡 Medium | - | 1 | Array, Math | [🔗](https://leetcode.com/problems/construct-uniform-parity-array-ii/) | [C++](./solutions/3876.construct-uniform-parity-array-ii.cpp) |
 | 3903 | Smallest Stable Index I | 🟢 Easy | - | 1 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-i/) | [C++](./solutions/3903.smallest-stable-index-i.cpp) |
 | 3904 | Smallest Stable Index II | 🟡 Medium | - | 2 | Array, Prefix Sum | [🔗](https://leetcode.com/problems/smallest-stable-index-ii/) | [C++](./solutions/3904.smallest-stable-index-ii.cpp) |
+| 3963 | Create Grid With Exactly One Path | 🟢 Easy | - | 1 | - | [🔗](https://leetcode.com/problems/create-grid-with-exactly-one-path/) | [C++](./solutions/3963.create-grid-with-exactly-one-path.cpp) |
 
 ## 🔥 Recent Solutions
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3736 | Minimum Moves to Equal Array Elements III | 2026-11-03 |
+| 3963 | Create Grid With Exactly One Path | 2026-10-27 |
+| 2409 | Count Days Spent Together | 2026-10-24 |
 | 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 2026-10-15 |
 | 2778 | Sum of Squares of Special Elements  | 2026-10-11 |
@@ -121,7 +127,4 @@
 | 20 | Valid Parentheses | 2026-10-01 |
 | 1614 | Maximum Nesting Depth of the Parentheses | 2026-09-28 |
 | 3550 | Smallest Index With Digit Sum Equal to Index | 2026-09-24 |
-| 155 | Min Stack | 2026-09-23 |
-| 3498 | Reverse Degree of a String | 2026-09-21 |
-| 1621 | Number of Sets of K Non-Overlapping Line Segments | 2026-09-16 |
 
