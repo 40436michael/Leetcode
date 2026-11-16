@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 23 |
+| 🟢 Easy | 24 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **42** |
+| **Total** | **43** |
 
 ## 📌 需要複習
 
@@ -38,7 +38,7 @@
 | Tag | 題數 |
 | :--- | ---: |
 | Array | 25 |
-| String | 10 |
+| String | 11 |
 | Hash Table | 9 |
 | Math | 9 |
 | Sorting | 7 |
@@ -50,6 +50,7 @@
 | Bracket Sequences | 3 |
 | Enumeration | 2 |
 | Matrix | 2 |
+| Simulation | 2 |
 | Binary Indexed Tree | 1 |
 | Binary Tree | 1 |
 | Bucket Sort | 1 |
@@ -65,7 +66,6 @@
 | Quickselect | 1 |
 | Recursion | 1 |
 | Segment Tree | 1 |
-| Simulation | 1 |
 | Sliding Window | 1 |
 | Tree | 1 |
 | Union-Find | 1 |
@@ -98,6 +98,7 @@
 | 1614 | Maximum Nesting Depth of the Parentheses | 🟢 Easy | - | 1 | String, Stack, Bracket Sequences | [🔗](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | [C++](./solutions/1614.maximum-nesting-depth-of-the-parentheses.cpp) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | 🟡 Medium | ⚠️ 不熟 | 1 | Math, Dynamic Programming, Combinatorics, Prefix Sum | [🔗](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) | [C++](./solutions/1621.number-of-sets-of-k-non-overlapping-line-segments.cpp) |
 | 2089 | Find Target Indices After Sorting Array | 🟢 Easy | - | 1 | Array, Binary Search, Sorting | [🔗](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | [C++](./solutions/2089.find-target-indices-after-sorting-array.cpp) |
+| 2243 | Calculate Digit Sum of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/calculate-digit-sum-of-a-string/) | [C++](./solutions/2243.calculate-digit-sum-of-a-string.cpp) |
 | 2265 | Count Nodes Equal to Average of Subtree | 🟡 Medium | ⚠️ 不熟 | 1 | Tree, Depth-First Search, Binary Tree | [🔗](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | [C++](./solutions/2265.count-nodes-equal-to-average-of-subtree.cpp) |
 | 2409 | Count Days Spent Together | 🟢 Easy | - | 1 | Math, String | [🔗](https://leetcode.com/problems/count-days-spent-together/) | [C++](./solutions/2409.count-days-spent-together.cpp) |
 | 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
@@ -121,6 +122,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 2243 | Calculate Digit Sum of a String | 2026-11-17 |
 | 3364 | Minimum Positive Sum Subarray  | 2026-11-17 |
 | 3105 | Longest Strictly Increasing or Strictly Decreasing Subarray | 2026-11-13 |
 | 1385 | Find the Distance Value Between Two Arrays | 2026-11-06 |
@@ -130,5 +132,4 @@
 | 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 2026-10-15 |
 | 2778 | Sum of Squares of Special Elements  | 2026-10-11 |
-| 1021 | Remove Outermost Parentheses | 2026-10-09 |
 
