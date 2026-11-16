@@ -10,25 +10,20 @@ public:
     int minimumSumSubarray(vector<int>& nums, int l, int r) {
         int ans = INT_MAX;
         int n=nums.size();
-        for(int i=0;i<n;i++){
+        for(int len=l;len<=r;len++){
             int sum=0;
-            for(int j=i;j<n;j++){
-                sum+=nums[j];
-                if(sum<=0){
-                    continue;
+            for(int i=0;i<n;i++){
+                sum+=nums[i];
+                if(i>=len){
+                    sum-=nums[i-len];
                 }
-                if(j-i+1>r){
-                    break;
-                }
-                if(j-i+1>=l){
-                    ans=min(ans,sum);
-                }
+                if (i>=len-1&&sum>0&&sum<ans){
+                    ans=sum;
+                };
+
             }
         }
-        if(ans==INT_MAX){
-            ans=-1;
-        }
-        return ans;
+        return ans==INT_MAX?-1:ans;
     }
 };
 // @lc code=end
