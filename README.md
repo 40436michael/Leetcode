@@ -103,7 +103,7 @@
 | 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 🟢 Easy | - | 1 | Array, Hash Table, Binary Indexed Tree, Segment Tree | [🔗](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | [C++](./solutions/2913.subarrays-distinct-element-sum-of-squares-i.cpp) |
 | 3105 | Longest Strictly Increasing or Strictly Decreasing Subarray | 🟢 Easy | - | 2 | Array | [🔗](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) | [C++](./solutions/3105.longest-strictly-increasing-or-strictly-decreasing-subarray.cpp) |
-| 3364 | Minimum Positive Sum Subarray  | 🟢 Easy | - | 1 | Array, Sliding Window, Prefix Sum | [🔗](https://leetcode.com/problems/minimum-positive-sum-subarray/) | [C++](./solutions/3364.minimum-positive-sum-subarray.cpp) |
+| 3364 | Minimum Positive Sum Subarray  | 🟢 Easy | - | 2 | Array, Sliding Window, Prefix Sum | [🔗](https://leetcode.com/problems/minimum-positive-sum-subarray/) | [C++](./solutions/3364.minimum-positive-sum-subarray.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
 | 3483 | Unique 3-Digit Even Numbers | 🟢 Easy | - | 1 | Array, Hash Table, Recursion, Enumeration | [🔗](https://leetcode.com/problems/unique-3-digit-even-numbers/) | [C++](./solutions/3483.unique-3-digit-even-numbers.cpp) |
 | 3498 | Reverse Degree of a String | 🟢 Easy | - | 1 | String, Simulation | [🔗](https://leetcode.com/problems/reverse-degree-of-a-string/) | [C++](./solutions/3498.reverse-degree-of-a-string.cpp) |
@@ -121,7 +121,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
-| 3364 | Minimum Positive Sum Subarray  | 2026-11-14 |
+| 3364 | Minimum Positive Sum Subarray  | 2026-11-17 |
 | 3105 | Longest Strictly Increasing or Strictly Decreasing Subarray | 2026-11-13 |
 | 1385 | Find the Distance Value Between Two Arrays | 2026-11-06 |
 | 3736 | Minimum Moves to Equal Array Elements III | 2026-11-03 |
