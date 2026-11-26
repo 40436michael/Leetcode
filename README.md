@@ -6,10 +6,10 @@
 
 | 難度 | 題數 |
 | :---: | ---: |
-| 🟢 Easy | 26 |
+| 🟢 Easy | 27 |
 | 🟡 Medium | 14 |
 | 🔴 Hard | 4 |
-| **Total** | **45** |
+| **Total** | **46** |
 
 ## 📌 需要複習
 
@@ -39,7 +39,7 @@
 | :--- | ---: |
 | Array | 26 |
 | String | 12 |
-| Math | 10 |
+| Math | 11 |
 | Hash Table | 9 |
 | Sorting | 7 |
 | Dynamic Programming | 5 |
@@ -49,8 +49,8 @@
 | Binary Search | 4 |
 | Bracket Sequences | 3 |
 | Enumeration | 3 |
+| Simulation | 3 |
 | Matrix | 2 |
-| Simulation | 2 |
 | Sliding Window | 2 |
 | Binary Indexed Tree | 1 |
 | Binary Tree | 1 |
@@ -106,6 +106,7 @@
 | 2778 | Sum of Squares of Special Elements  | 🟢 Easy | - | 1 | Array, Enumeration | [🔗](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | [C++](./solutions/2778.sum-of-squares-of-special-elements.cpp) |
 | 2913 | Subarrays Distinct Element Sum of Squares I | 🟢 Easy | - | 1 | Array, Hash Table, Binary Indexed Tree, Segment Tree | [🔗](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | [C++](./solutions/2913.subarrays-distinct-element-sum-of-squares-i.cpp) |
 | 3105 | Longest Strictly Increasing or Strictly Decreasing Subarray | 🟢 Easy | - | 2 | Array | [🔗](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) | [C++](./solutions/3105.longest-strictly-increasing-or-strictly-decreasing-subarray.cpp) |
+| 3360 | Stone Removal Game | 🟢 Easy | - | 1 | Math, Simulation | [🔗](https://leetcode.com/problems/stone-removal-game/) | [C++](./solutions/3360.stone-removal-game.cpp) |
 | 3364 | Minimum Positive Sum Subarray  | 🟢 Easy | - | 2 | Array, Sliding Window, Prefix Sum | [🔗](https://leetcode.com/problems/minimum-positive-sum-subarray/) | [C++](./solutions/3364.minimum-positive-sum-subarray.cpp) |
 | 3411 | Maximum Subarray With Equal Products | 🟢 Easy | - | 1 | Array, Math, Sliding Window, Enumeration, Number Theory | [🔗](https://leetcode.com/problems/maximum-subarray-with-equal-products/) | [C++](./solutions/3411.maximum-subarray-with-equal-products.cpp) |
 | 3414 | Maximum Score of Non-overlapping Intervals | 🔴 Hard | ⚠️ 不熟 | 1 | Array, Binary Search, Dynamic Programming, Sorting | [🔗](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | [C++](./solutions/3414.maximum-score-of-non-overlapping-intervals.cpp) |
@@ -125,6 +126,7 @@
 
 | 題號 | 題目名稱 | 解題日期 |
 | :---: | :--- | :---: |
+| 3360 | Stone Removal Game | 2026-11-26 |
 | 3411 | Maximum Subarray With Equal Products | 2026-11-24 |
 | 2124 | Check if All A's Appears Before All B's | 2026-11-22 |
 | 2243 | Calculate Digit Sum of a String | 2026-11-17 |
@@ -134,5 +136,4 @@
 | 3736 | Minimum Moves to Equal Array Elements III | 2026-11-03 |
 | 3963 | Create Grid With Exactly One Path | 2026-10-27 |
 | 2409 | Count Days Spent Together | 2026-10-24 |
-| 2089 | Find Target Indices After Sorting Array | 2026-10-19 |
 
